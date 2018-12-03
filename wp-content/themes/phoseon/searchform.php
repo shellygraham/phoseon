@@ -1,21 +1,19 @@
 <?php
 /**
- * Template for displaying search forms in Twenty Seventeen
+ * The template for displaying search form
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
+ * @package FoundationPress
+ * @since FoundationPress 1.0.0
  */
 
 ?>
 
-<?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
-
-<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<label for="<?php echo $unique_id; ?>">
-		<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'twentyseventeen' ); ?></span>
-	</label>
-	<input type="search" id="<?php echo $unique_id; ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'twentyseventeen' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-	<button type="submit" class="search-submit"><?php echo twentyseventeen_get_svg( array( 'icon' => 'search' ) ); ?><span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'twentyseventeen' ); ?></span></button>
+<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+	<div class="input-group">
+		<input type="text" class="input-group-field" value="" name="s" id="s" aria-label="Search" placeholder="<?php
+		esc_attr_e( 'Search', 'foundationpress' ); ?>">
+		<div class="input-group-button">
+			<input type="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'foundationpress' ); ?>" class="button">
+		</div>
+	</div>
 </form>
