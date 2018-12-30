@@ -10,11 +10,11 @@
  * Big thanks to Brett Mason (https://github.com/brettsmason) for the awesome walker
  */
 
-if ( ! class_exists( 'Foundationpress_Top_Bar_Walker' ) ) :
-	class Foundationpress_Top_Bar_Walker extends Walker_Nav_Menu {
+if ( ! class_exists( 'Foundationpress_Footer_Walker' ) ) :
+	class Foundationpress_Footer_Walker extends Walker_Nav_Menu {
 		function start_lvl( &$output, $depth = 0, $args = array() ) {
 			$indent  = str_repeat( "\t", $depth );
-			$output .= "\n$indent<ul class=\"dropdown menu vertical\" data-toggle>\n";
+			$output .= "\n$indent<ul class=\"menu\" data-toggle>\n";
 		}
 	}
 endif;

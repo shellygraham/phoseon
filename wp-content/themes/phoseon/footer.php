@@ -10,11 +10,17 @@
 ?>
 
 <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-grid">
-            <?php dynamic_sidebar( 'footer-widgets' ); ?>
-        </div>
-    </div>
+	<div class="grid-container">
+		<div class="grid-x grid-margin-x">
+			<div class="cell small-4">
+				<?php get_template_part( 'template-parts/social-nav' ); ?>
+			</div>
+			<div class="cell small-8">
+				<?php get_template_part( 'template-parts/footer-nav' ); ?>
+				<?php the_field('footer_subtext','options'); ?>
+			</div>
+		</div>
+	</div>
 </footer>
 
 <?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>

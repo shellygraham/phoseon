@@ -3,8 +3,31 @@ body {
 }
 
 header {
+	.utility-home {
+		float: left;
+	}
+	#country-menu {
+		float: left;
+		.submenu {
+			position: absolute;
+			background: #fff;
+			z-index: 100;
+		}
+	}
+	.utility-blog {
+		float: left;
+	}
 	.top-bar-left {
 		float: right;
+	}
+	.utility-crc {
+		float: left;
+	}
+	#searchform {
+		float: left;
+		.input-group-field {
+			width: 150px;
+		}
 	}
 }
 
