@@ -9,7 +9,7 @@
 
 register_nav_menus(
 	array(
-		'top-bar-r'  => esc_html__( 'Right Top Bar', 'foundationpress' ),
+		'primary-nav'  => esc_html__( 'Primary', 'foundationpress' ),
 		'mobile-nav' => esc_html__( 'Mobile', 'foundationpress' ),
 	)
 );
@@ -27,8 +27,8 @@ if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
 				'container'      => false,
 				'menu_class'     => 'dropdown menu',
 				'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
-				'theme_location' => 'top-bar-r',
-				'depth'          => 3,
+				'theme_location' => 'primary-nav',
+				'depth'          => 4,
 				'fallback_cb'    => false,
 				'walker'         => new Foundationpress_Top_Bar_Walker(),
 			)

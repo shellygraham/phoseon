@@ -1,3 +1,19 @@
 body {
-	background: purple;
+	background: #fff;
+}
+
+header {
+	.top-bar-left {
+		float: right;
+	}
+}
+
+.hero {
+	outline: 1px solid black;
+}
+
+footer {
+	.footer-container {
+		border-top: 0;
+	}
 }

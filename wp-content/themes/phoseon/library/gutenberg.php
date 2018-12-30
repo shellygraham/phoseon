@@ -36,3 +36,90 @@ if ( ! function_exists( 'foundationpress_gutenberg_support' ) ) :
 
 	add_action( 'after_setup_theme', 'foundationpress_gutenberg_support' );
 endif;
+
+// Custom ACF Blocks
+
+add_action('acf/init', 'my_acf_init');
+function my_acf_init() {
+	
+	// check function exists
+	if( function_exists('acf_register_block') ) {
+		
+		// register a hero block
+		acf_register_block(array(
+			'name'				=> 'hero',
+			'title'				=> __('Hero Block'),
+			'description'		=> __('Custom hero block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'hero', 'layout' ),
+		));
+
+		// register a three column block
+		acf_register_block(array(
+			'name'				=> 'three-columns',
+			'title'				=> __('Three Columns'),
+			'description'		=> __('Three column block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'three-columns', 'layout' ),
+		));
+
+		// register a four column block
+		acf_register_block(array(
+			'name'				=> 'four-columns',
+			'title'				=> __('Four Columns'),
+			'description'		=> __('Four column block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'four-columns', 'layout' ),
+		));
+
+		// register a section header block
+		acf_register_block(array(
+			'name'				=> 'section-header',
+			'title'				=> __('Section Header'),
+			'description'		=> __('Section Header.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'section-header', 'layout' ),
+		));
+
+		// register a full-width image block
+		acf_register_block(array(
+			'name'				=> 'full-width-image',
+			'title'				=> __('Full Width Image'),
+			'description'		=> __('Full Width Image.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'full-width-image', 'layout' ),
+		));
+
+		// register a cta-banner block
+		acf_register_block(array(
+			'name'				=> 'cta-banner',
+			'title'				=> __('CTA Banner'),
+			'description'		=> __('CTA Banner.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'cta-banner', 'layout' ),
+		));
+	}
+}
+
+function my_acf_block_render_callback( $block ) {
+	
+	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
+	$slug = str_replace('acf/', '', $block['name']);
+	
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists( get_theme_file_path("/template-parts/block/content-{$slug}.php") ) ) {
+		include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
+	}
+}
