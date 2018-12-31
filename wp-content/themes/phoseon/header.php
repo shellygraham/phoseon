@@ -67,3 +67,14 @@
 			</div>
 		</nav>
 	</header>
+	<div class="breadcrumbs">
+		<div class="grid-container">
+			<div class="grid-x grid-margin-x">
+				<div class="cell small-8">	
+					<?php if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+						} ?>
+				</div>
+			</div>
+		</div>
+	</div>

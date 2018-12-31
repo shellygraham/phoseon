@@ -9,13 +9,7 @@ get_header(); ?>
 	<div class="main-grid">
 		<main class="main-content-full-width">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
-				<?php
-if ( function_exists('yoast_breadcrumb') ) {
-  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-}
-?>
-				<?php comments_template(); ?>
+				<?php the_content(); ?>
 			<?php endwhile; ?>
 		</main>
 	</div>

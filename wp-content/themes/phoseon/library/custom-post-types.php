@@ -123,20 +123,38 @@
 	}  
 	add_action( 'init', 'events_cpt_taxonomy');
 
-	function products_cpt_taxonomy() {  
+	function products_emitting_taxonomy() {  
 	    register_taxonomy(  
-	        'products_cats',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        'emitting_cats',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
 	        'products',        //post type name
 	        array(  
 	            'hierarchical' => true,  
-	            'label' => 'Categories',  //Display name
+	            'label' => 'Emitting Window Size',  //Display name
 	            'query_var' => true,
 	            'rewrite' => array(
-	                'slug' => 'products_cats', // This controls the base slug that will display before each term
+	                'slug' => 'emitting_cats', // This controls the base slug that will display before each term
 	                'with_front' => false // Don't display the category base before 
 	            ),
 	            'show_in_rest' => true,
 	        )  
 	    );  
 	}  
-	add_action( 'init', 'products_cpt_taxonomy');	
+	add_action( 'init', 'products_emitting_taxonomy');
+
+	function products_irradiance_taxonomy() {  
+	    register_taxonomy(  
+	        'irradiance_cats',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        'products',        //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Irradiance Wavelength',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'irradiance_cats', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'products_irradiance_taxonomy');	
