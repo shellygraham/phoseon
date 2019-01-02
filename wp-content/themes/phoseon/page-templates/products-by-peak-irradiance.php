@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Products by Emitting Length
+Template Name: Products by Peak Irradiance
 */
 
 get_header(); ?>
@@ -30,18 +30,25 @@ get_header(); ?>
 									if( $posts ): ?>
 									<?php foreach( $posts as $post ): ?>
 									<?php setup_postdata($post); ?>
-								<a href="<?php the_permalink(); ?>">
+										<a href="<?php the_permalink(); ?>">
 										<?php wp_reset_postdata(); ?>
 									<?php endforeach; ?>
-									<?php endif; ?>
-									<h5><?php the_sub_field('product_name'); ?></h5>
-				        			<?php 										
-										$image = get_sub_field('product_sub_image');
-										$size = 'full'; // (thumbnail, medium, large, full or custom size)
-										if( $image ) {
-											echo wp_get_attachment_image( $image, $size );
-										}
+								<?php endif; ?>
+								<h5><?php the_sub_field('product_name'); ?></h5>
+			        			<?php 										
+									$image = get_sub_field('product_sub_image');
+									$size = 'full'; // (thumbnail, medium, large, full or custom size)
+									if( $image ) {
+										echo wp_get_attachment_image( $image, $size );
+									}
 									?>
+								<?php
+								$terms = get_sub_field('peak_irradiance_@_wavelength');
+								if( $terms ): ?>
+									<?php foreach( $terms as $term ): ?>
+										<p><?php echo $term->name; ?></p>
+									<?php endforeach; ?>
+								<?php endif; ?>
 								</a>
 					    	</div>
 						<?php endwhile; ?>

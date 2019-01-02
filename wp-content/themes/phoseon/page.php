@@ -12,18 +12,15 @@
 
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
-<div class="main-container">
-	<div class="main-grid">
-		<main class="main-content">
+	<div class="grid-container">
+		<div class="grid-x grid-margin-x">
+			<div class="cell small-12">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
-
-				<?php comments_template(); ?>
+				<?php the_content(); ?>
 			<?php endwhile; ?>
-		</main>
-		<?php get_sidebar(); ?>
+			</div>
+		</div>
 	</div>
-</div>
+	
 <?php
 get_footer();
