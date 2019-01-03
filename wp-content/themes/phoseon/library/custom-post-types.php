@@ -23,8 +23,10 @@
 					'singular_name' => __( 'Press Release' )
 				),
 				'public' => true,
+				'show_in_rest' => true,
 				'has_archive' => true,
-				'rewrite' => array('slug' => 'news/press-releases'),
+				'rewrite' => array('slug' => 'press-releases'),
+				'supports' => array( 'title', 'editor', 'comments', 'thumbnail', 'excerpt', 'revisions' ),
 			)
 		);
 
@@ -35,8 +37,10 @@
 					'singular_name' => __( 'In the News' )
 				),
 				'public' => true,
+				'show_in_rest' => true,
 				'has_archive' => true,
-				'rewrite' => array('slug' => 'news/in-the-news'),
+				'rewrite' => array('slug' => 'in-the-news'),
+				'supports' => array( 'title', 'editor', 'comments', 'thumbnail', 'excerpt', 'revisions' ),
 			)
 		);
 
@@ -71,14 +75,14 @@
 	
 	function news_cats_taxonomy() {  
 	    register_taxonomy(  
-	        'category',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        'cpt_category',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
 	        array( 'press_releases', 'in_the_news' ),       //post type name
 	        array(  
 	            'hierarchical' => true,  
 	            'label' => 'Category',  //Display name
 	            'query_var' => true,
 	            'rewrite' => array(
-	                'slug' => 'category', // This controls the base slug that will display before each term
+	                'slug' => 'cpt_category', // This controls the base slug that will display before each term
 	                'with_front' => false // Don't display the category base before 
 	            ),
 	            'show_in_rest' => true,
@@ -111,7 +115,7 @@
 	        'events',        //post type name
 	        array(  
 	            'hierarchical' => true,  
-	            'label' => 'Categories',  //Display name
+	            'label' => 'Division',  //Display name
 	            'query_var' => true,
 	            'rewrite' => array(
 	                'slug' => 'events_cats', // This controls the base slug that will display before each term
@@ -157,4 +161,22 @@
 	        )  
 	    );  
 	}  
-	add_action( 'init', 'products_irradiance_taxonomy');	
+	add_action( 'init', 'products_irradiance_taxonomy');
+	
+	function create_tag_taxonomies() {  
+	    register_taxonomy(  
+	        'cpt_tags',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'press_releases', 'in_the_news' ),       //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Tags',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'cpt_tags', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'create_tag_taxonomies', 0 );

@@ -2,7 +2,7 @@
 /**
  * The default template for displaying content
  *
- * Used for both single and index/archive/search.
+ * Used for both In The News and Press Releases.
  *
  * @package FoundationPress
  * @since FoundationPress 1.0.0
@@ -27,12 +27,16 @@
 			</div>
 			<div class="cell small-4">
 			<?php get_template_part( 'template-parts/featured-image' ); ?>
+			</div>
 		</div>
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>
 	</div>
+	<?php comments_template(); ?>
 	<footer>
-		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
+		<?php the_tags( '', ' | ', '' ); ?>
 	</footer>
 </article>
+
+<?php get_footer();
