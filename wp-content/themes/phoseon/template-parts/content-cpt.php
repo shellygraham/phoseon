@@ -32,11 +32,10 @@
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>
+		Tags: <?php the_terms( $post->ID, 'cpt_tags', '', ' | ' ); ?><br />
+		Categories: <?php the_terms( $post->ID, 'cpt_category', '', ' | ' ); ?>
 	</div>
 	<?php comments_template(); ?>
-	<footer>
-		<?php the_tags( '', ' | ', '' ); ?>
-	</footer>
 </article>
 
 <?php get_footer();

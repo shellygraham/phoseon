@@ -29,7 +29,7 @@ if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
 			array(
 				'container'      => false,
 				'menu_class'     => 'dropdown menu',
-				'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
+				'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true" data-multi-open="false">%3$s</ul>',
 				'theme_location' => 'primary-nav',
 				'depth'          => 4,
 				'fallback_cb'    => false,

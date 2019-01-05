@@ -35,14 +35,16 @@
 		<div class="utility">
 			<div class="grid-container">
 				<div class="grid-x grid-margin-x">
-					<div class="cell small-8">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="utility-home"><?php bloginfo( 'name' ); ?></a>
-						<?php get_template_part( 'template-parts/country-nav' ); ?>
-						<a href="/blog" class="utility-blog">Phoseon Blog</a>
-						<a href="http://www.phoseon-support.com" class="utility-crc">Customer Resource Center</a>
-						<?php get_search_form(); ?>
+					<div class="cell small-7">
+						<div class="utility-sub-wrapper">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="utility-home"><?php bloginfo( 'name' ); ?></a>
+							<?php get_template_part( 'template-parts/country-nav' ); ?>
+							<a href="/blog" class="utility-blog">Phoseon Blog</a>
+							<a href="http://www.phoseon-support.com" class="utility-crc">Customer Resource Center</a>
+							<?php get_search_form(); ?>
+						</div>
 					</div>
-					<div class="cell small-3 small-offset-1">
+					<div class="cell small-3 small-offset-2">
 						<div class="top-bar-left">
 							<div class="site-desktop-title top-bar-title">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>

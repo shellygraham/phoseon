@@ -16,6 +16,8 @@
 		);
 */
 
+// Press Releases CPT
+
 		register_post_type( 'press_releases',
 			array(
 				'labels' => array(
@@ -29,6 +31,8 @@
 				'supports' => array( 'title', 'editor', 'comments', 'thumbnail', 'excerpt', 'revisions' ),
 			)
 		);
+
+// In the news CPT
 
 		register_post_type( 'in_the_news',
 			array(
@@ -44,6 +48,8 @@
 			)
 		);
 
+// Events CPT
+
 		register_post_type( 'events',
 			array(
 				'labels' => array(
@@ -56,6 +62,8 @@
 				'rewrite' => array('slug' => 'events'),
 			)
 		);
+
+// Products CPT
 
 		register_post_type( 'products',
 			array(
@@ -72,17 +80,19 @@
 
 	}
 	add_action( 'init', 'create_post_type' );
+
+// NEWS Cats
 	
 	function news_cats_taxonomy() {  
 	    register_taxonomy(  
-	        'cpt_category',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
-	        array( 'press_releases', 'in_the_news' ),       //post type name
+	        'news_category',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'in_the_news' ),       //post type name
 	        array(  
 	            'hierarchical' => true,  
 	            'label' => 'Category',  //Display name
 	            'query_var' => true,
 	            'rewrite' => array(
-	                'slug' => 'cpt_category', // This controls the base slug that will display before each term
+	                'slug' => 'news-category', // This controls the base slug that will display before each term
 	                'with_front' => false // Don't display the category base before 
 	            ),
 	            'show_in_rest' => true,
@@ -91,16 +101,38 @@
 	}  
 	add_action( 'init', 'news_cats_taxonomy');
 
+// PR Cats
+
+	function pr_cats_taxonomy() {  
+	    register_taxonomy(  
+	        'pr_category',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'press_releases' ),       //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Category',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'pr-category', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'pr_cats_taxonomy');
+
+// NEWS Year Cats
+
 	function news_year_taxonomy() {  
 	    register_taxonomy(  
 	        'news_year',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
-	        array( 'press_releases', 'in_the_news' ),       //post type name
+	        array( 'in_the_news' ),       //post type name
 	        array(  
 	            'hierarchical' => true,  
 	            'label' => 'Year',  //Display name
 	            'query_var' => true,
 	            'rewrite' => array(
-	                'slug' => 'year', // This controls the base slug that will display before each term
+	                'slug' => 'news-year', // This controls the base slug that will display before each term
 	                'with_front' => false // Don't display the category base before 
 	            ),
 	            'show_in_rest' => true,
@@ -108,7 +140,29 @@
 	    );  
 	}  
 	add_action( 'init', 'news_year_taxonomy');
-	
+
+// PR Year Cats
+
+	function pr_year_taxonomy() {  
+	    register_taxonomy(  
+	        'pr_year',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'press_releases' ),       //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Year',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'pr-year', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'pr_year_taxonomy');
+
+// Events Cats
+
 	function events_cpt_taxonomy() {  
 	    register_taxonomy(  
 	        'events_cats',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
@@ -126,6 +180,8 @@
 	    );  
 	}  
 	add_action( 'init', 'events_cpt_taxonomy');
+
+// Emitting Cats
 
 	function products_emitting_taxonomy() {  
 	    register_taxonomy(  
@@ -145,6 +201,8 @@
 	}  
 	add_action( 'init', 'products_emitting_taxonomy');
 
+// Irriadiance Cats
+
 	function products_irradiance_taxonomy() {  
 	    register_taxonomy(  
 	        'irradiance_cats',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
@@ -162,21 +220,43 @@
 	    );  
 	}  
 	add_action( 'init', 'products_irradiance_taxonomy');
+
+// NEWS Tags
 	
-	function create_tag_taxonomies() {  
+	function news_tag_taxonomy() {  
 	    register_taxonomy(  
-	        'cpt_tags',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
-	        array( 'press_releases', 'in_the_news' ),       //post type name
+	        'news_tags',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'in_the_news' ),       //post type name
 	        array(  
 	            'hierarchical' => true,  
 	            'label' => 'Tags',  //Display name
 	            'query_var' => true,
 	            'rewrite' => array(
-	                'slug' => 'cpt_tags', // This controls the base slug that will display before each term
+	                'slug' => 'news_tag', // This controls the base slug that will display before each term
 	                'with_front' => false // Don't display the category base before 
 	            ),
 	            'show_in_rest' => true,
 	        )  
 	    );  
 	}  
-	add_action( 'init', 'create_tag_taxonomies', 0 );
+	add_action( 'init', 'news_tag_taxonomy', 0 );
+
+// PR Tags
+	
+	function pr_tag_taxonomy() {  
+	    register_taxonomy(  
+	        'pr_tags',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'press_releases' ),       //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Tags',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'pr_tag', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'pr_tag_taxonomy', 0 );

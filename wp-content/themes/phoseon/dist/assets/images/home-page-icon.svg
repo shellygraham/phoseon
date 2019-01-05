@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="162px" height="159px" viewBox="0 0 162 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>home-page-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home-page-icon" fill-rule="nonzero" fill="#FFFFFF">
+            <g transform="translate(18.000000, 17.000000)" id="Shape">
+                <path d="M102.8,36.925 L102.8,5.325 L86.1,5.325 L86.1,19.425 L72.6,5.325 C65.7,-1.775 59.1,-1.775 52.2,5.325 L0,60.125 L0,77.625 L59.3,16.425 C61,14.625 63.8,14.625 65.6,16.425 L86.1,37.625 L102.8,54.825 L124.9,77.625 L124.9,60.125 L102.8,36.925 Z M86.1,51.425 L63.5,27.825 C62.9,27.225 62,27.225 61.4,27.825 L13.5,77.825 L13.5,118.925 C13.5,122.225 16.2,124.925 19.5,124.925 L46.4,124.925 L46.4,80.225 L78.4,80.225 L78.4,124.825 L105.3,124.825 C108.6,124.825 111.3,122.125 111.3,118.825 L111.3,77.725 L102.7,68.825 L86.1,51.425 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The Press Release index
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -18,15 +18,15 @@ get_header(); ?>
 <div class="grid-container">
 	<div class="grid-x grid-margin-x">
 		<div class="cell small-3">
-			<?php the_field('blog_intro', 'options'); ?>
+			<?php the_title(); ?>
 			<?php get_sidebar(); ?>
 		</div>
 		<div class="cell small-9">
-			<?php $args = array('post_type'=>array('post', 'in_the_news', 'press_releases'));
+			<?php $args = array('post_type'=>array('press_releases'));
 				query_posts($args); ?>
 				<?php if ( have_posts() ) : ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'template-parts/content-index', get_post_format() ); ?>
+						<?php get_template_part( 'template-parts/content-cpt', get_post_format() ); ?>
 					<?php endwhile; ?>
 				<?php endif; // End have_posts() check. ?>
 				<?php if ( function_exists( 'foundationpress_pagination' ) ) :
