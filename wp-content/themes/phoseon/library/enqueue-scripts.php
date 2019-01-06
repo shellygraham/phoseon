@@ -57,6 +57,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'app.js' ), array( 'jquery' ), '2.10.4', true );
 
+		// Enqueue Custom Phoseon scripts
+		wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/src/assets/js/' . foundationpress_asset_path( 'custom.js' ), array( 'jquery' ), '1.0', true );
+
 		// Enqueue FontAwesome from CDN. Uncomment the line below if you need FontAwesome.
 		//wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/5016a31c8c.js', array(), '4.7.0', true );
 

@@ -1,15 +1,22 @@
+
 @font-face {
   font-family: 'trebuchet_msregular';
-  src: url('../fonts/trebuc-webfont.woff') format('woff');
+  src: url('../fonts/trebuc-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/trebuc-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/trebuc-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/trebuc-webfont.svg#trebuchet_msregular') format('svg'); /* Legacy iOS */
 }
+
 @font-face {
   font-family: 'trebuchet_msbold';
-  src: url('../fonts/trebucbd-webfont.woff') format('woff');
+  src: url('../fonts/trebucbd-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/trebucbd-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/trebucbd-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/trebucbd-webfont.svg#trebuchet_msbold') format('svg'); /* Legacy iOS */
 }
 
 $font-regular: 'trebuchet_msregular';
 $font-bold: 'trebuchet_msbold';
-
 
 $purple: #633799;
 $blue: #006eb9;
@@ -154,6 +161,7 @@ header {
 			z-index: 100;
 			li {
 				width: auto;
+				display: block !important;
 				a {
 					font-family: $font-bold;
 					color: $blue;
@@ -231,7 +239,98 @@ header {
 .hero {
 }
 footer {
+	position: relative;
+	margin-top: 60px;
+	padding-top: 70px;
+	color: #fff;
 	.footer-container {
 		border-top: 0;
+	}
+	.footer-triangle {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 88px;
+		z-index: -1;
+		div {
+			background-image: url('../images/bottomTriangle.svg');
+			background-color: transparent;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 165px;
+		}
+	}
+	#social-menu {
+		li {
+			a {
+				background-repeat: no-repeat;
+				display: block;
+				height: 40px;
+				width: 40px;
+				text-indent: -999em;
+				overflow: hidden;
+				background-size: cover;
+			}
+			&.youtube {
+				a {
+					background-image: url('../images/social/youtube.png');
+					background-image: url('../images/social/youtube.svg');					
+				}
+			}
+			&.linkedin {
+				a {
+					background-image: url('../images/social/linkedin.png');
+					background-image: url('../images/social/linkedin.svg');					
+				}
+			}
+			&.twitter {
+				a {
+					background-image: url('../images/social/twitter.png');
+					background-image: url('../images/social/twitter.svg');					
+				}
+			}
+			&.facebook {
+				a {
+					background-image: url('../images/social/facebook.png');
+					background-image: url('../images/social/facebook.svg');					
+				}
+			}
+			&.googleplus {
+				a {
+					background-image: url('../images/social/googleplus.png');
+					background-image: url('../images/social/googleplus.svg');					
+				}
+			}
+		}
+	}
+	#footer-menu {
+		float: right;
+		margin-right: 74px;
+		li {
+			padding: 0 15px;
+			border-left: 1px solid #fff;
+			a {
+				font-family: $font-bold;
+				font-size: 15px;	
+				padding: 0;			
+			}
+			&:first-child {
+				border-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+	.copy {
+		float: right;
+		font-family: $font-regular;
+		font-size: 10px;
+		line-height: 15px;
+		margin-right: 74px;
+		text-align: right;
+		margin-top: 26px;
 	}
 }
