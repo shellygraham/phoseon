@@ -9,7 +9,7 @@
 <section class="three-columns">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-4">
+			<div class="cell small-4 bucket">
 			    <?php
 				$image = get_field('three_columns_image');
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -27,7 +27,7 @@
 			    <a href="<?php the_field('three_columns_button_link'); ?>" class="button"><?php the_field('three_columns_button_text'); ?></a>
 			    <?php endif; ?>
 			</div>
-			<div class="cell small-4">
+			<div class="cell small-4 bucket">
 			    <?php
 				$image = get_field('three_columns_image_2');
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -45,7 +45,7 @@
 			    <a href="<?php the_field('three_columns_button_link_2'); ?>" class="button"><?php the_field('three_columns_button_text_2'); ?></a>
 			    <?php endif; ?>
 			</div>
-			<div class="cell small-4">
+			<div class="cell small-4 bucket">
 			    <?php
 				$image = get_field('three_columns_image_3');
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)

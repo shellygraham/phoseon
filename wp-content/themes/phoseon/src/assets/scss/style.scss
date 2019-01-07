@@ -20,29 +20,66 @@ $font-bold: 'trebuchet_msbold';
 
 $purple: #633799;
 $blue: #006eb9;
+$dk-blue: #14679e;
 $red: #b8222a;
+$pale: #fafafa;
 
 h1 {
 	font-family: $font-bold;
 	color: $blue;
 	font-size: 48px;
+	line-height: 57px;
 }
 h2 {
 	font-family: $font-bold;
 	color: $purple;
-	font-size: 32px;	
+	font-size: 32px;
+	line-height: 38px;
+	a {
+		color: $blue;
+		text-decoration: underline;
+	}
 }
 h3 {
 	font-family: $font-regular;
 	color: $blue;
 	font-size: 24px;
+	a {
+		color: $blue;
+		text-decoration: underline;
+	}
+}
+h4 {
+	font-family: $font-regular;
+	color: $purple;
+	font-size: 20px;
+	line-height: 28px;	
+}
+
+a {
+	color: $blue;
+	&:hover {
+		color: $dk-blue;
+	}
+}
+
+hr {
+	border-bottom: 5px solid $purple;
 }
 
 body {
 	background: #fff;
+	font-family: $font-regular;
+	font-size: 16px;
+	&.home {
+		#breadcrumbs {
+			display: none;
+		}
+	}
 }
 
 header {
+	padding-bottom: 30px;
 	.utility {
 		.utility-sub-wrapper {
 			border-bottom: 5px solid #006eb9;
@@ -119,7 +156,7 @@ header {
 		#searchform {
 			float: left;
 			.input-group-field {
-				width: 200px;
+				width: 198px;
 				background-color: #dededd;
 				border: 0;
 				height: 28px;
@@ -237,6 +274,56 @@ header {
 	}
 }
 .hero {
+	padding-bottom: 15px;
+}
+.section-header {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	h2 {
+		text-align: center;
+		margin-bottom: 0;
+	}
+	hr {
+		margin-bottom: 24px;
+	}
+}
+.four-columns, .three-columns {
+	padding-top: 15px;
+	padding-bottom: 60px;
+	.bucket {
+		padding: 10px 10px 20px 10px;
+		background: $pale;
+		text-align: center;
+		h3 {
+			font-family: $font-bold;
+			margin: 20px 0 15px 0;
+		}
+	}
+}
+.cta-banner {
+	padding: 38px 0 30px 0;
+	margin-bottom: 45px;
+	h4 {
+		color: #fff;
+	}
+	.cta-button {
+		position: relative;
+		.button {
+			font-family: $font-bold;
+			font-size: 18px;
+			background: $pale;
+			color: $purple;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&.purple {
+		background: $purple;
+	}
+	&.blue {
+		background: $blue;
+	}
 }
 footer {
 	position: relative;
@@ -313,8 +400,9 @@ footer {
 			border-left: 1px solid #fff;
 			a {
 				font-family: $font-bold;
-				font-size: 15px;	
-				padding: 0;			
+				font-size: 15px;
+				padding: 0;
+				color: #fff;
 			}
 			&:first-child {
 				border-left: 0;

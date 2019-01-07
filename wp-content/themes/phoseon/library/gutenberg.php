@@ -102,13 +102,24 @@ function my_acf_init() {
 
 		// register a cta-banner block
 		acf_register_block(array(
-			'name'				=> 'cta-banner',
-			'title'				=> __('CTA Banner'),
-			'description'		=> __('CTA Banner.'),
+			'name'				=> 'cta-banner-purple',
+			'title'				=> __('CTA Banner (purple)'),
+			'description'		=> __('CTA Banner (purple).'),
 			'render_callback'	=> 'my_acf_block_render_callback',
 			'category'			=> 'layout',
 			'icon'				=> 'admin-comments',
-			'keywords'			=> array( 'cta-banner', 'layout' ),
+			'keywords'			=> array( 'cta-banner-purple', 'layout' ),
+		));
+
+		// register a cta-banner block
+		acf_register_block(array(
+			'name'				=> 'cta-banner-blue',
+			'title'				=> __('CTA Banner (blue)'),
+			'description'		=> __('CTA Banner (blue).'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'cta-banner-blue', 'layout' ),
 		));
 	}
 }

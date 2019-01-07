@@ -19,7 +19,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 <section class="hero">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-5">
+			<div class="cell small-5 small-offset-1">
 			    <h1><?php the_field('hero_title'); ?></h1>
 			    <h2><?php the_field('hero_subtitle'); ?></h2>
 			    
@@ -31,7 +31,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 			    <a href="<?php the_field('hero_cta_button_link'); ?>" class="button"><?php the_field('hero_cta_button_text'); ?></a>
 			    <?php endif; ?>
 			</div>
-			<div class="cell small-7">
+			<div class="cell small-5">
 			    <?php
 				$image = get_field('hero_image');
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)
