@@ -1,6 +1,6 @@
 <?php
 /**
- * The default template for displaying cpt content
+ * The default template for displaying main blog content
  *
  * Used for index.
  *
@@ -22,13 +22,13 @@
 			?>
 <!-- 				<?php foundationpress_entry_meta(); ?> -->
 			<div class="entry-content">
-				<?php the_excerpt(); ?>
+				<p><?php echo strip_tags( get_the_excerpt() ); ?> <a href="<?php the_permalink(); ?>"> more »</a></p>
 			</div>
 			<?php the_tags( '', ' | ', '' ); ?>
 			<?php the_terms( $post->ID, 'cpt_tags', '', ' | ' ); ?>
 		</div>
-		<div class="cell small-4">
-			<?php get_template_part( 'template-parts/featured-image' ); ?>
+		<div class="cell small-3 small-offset-1">
+			<?php get_template_part( 'template-parts/featured-image-blog' ); ?>
 		</div>
 	</div>
 </article>

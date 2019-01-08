@@ -9,7 +9,7 @@
 <section class="four-columns">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-3 bucket">
+			<div class="cell medium-6 large-3 bucket">
 			    <?php
 				$image = get_field('four_columns_image');
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -24,10 +24,10 @@
 			    <p><?php the_field('four_columns_text'); ?></p>
 			    <?php endif; ?>
 			    <?php if( get_field('four_columns_button_link') ): ?>
-			    <a href="<?php the_field('four_columns_button_link'); ?>" class="button"><?php the_field('four_columns_button_text'); ?></a>
+			    <a href="<?php the_field('four_columns_button_link'); ?>"><?php the_field('four_columns_button_text'); ?></a>
 			    <?php endif; ?>
 			</div>
-			<div class="cell small-3 bucket">
+			<div class="cell medium-6 large-3 bucket">
 			    <?php
 				$image = get_field('four_columns_image_2');
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -42,10 +42,10 @@
 			    <p><?php the_field('four_columns_text_2'); ?></p>
 			    <?php endif; ?>
 			    <?php if( get_field('four_columns_button_link_2') ): ?>
-			    <a href="<?php the_field('four_columns_button_link_2'); ?>" class="button"><?php the_field('four_columns_button_text_2'); ?></a>
+			    <a href="<?php the_field('four_columns_button_link_2'); ?>"><?php the_field('four_columns_button_text_2'); ?></a>
 			    <?php endif; ?>
 			</div>
-			<div class="cell small-3 bucket">
+			<div class="cell medium-6 large-3 bucket">
 			    <?php
 				$image = get_field('four_columns_image_3');
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -60,10 +60,10 @@
 			    <p><?php the_field('four_columns_text_3'); ?></p>
 			    <?php endif; ?>
 			    <?php if( get_field('four_columns_button_link_3') ): ?>
-			    <a href="<?php the_field('four_columns_button_link_3'); ?>" class="button"><?php the_field('four_columns_button_text_3'); ?></a>
+			    <a href="<?php the_field('four_columns_button_link_3'); ?>"><?php the_field('four_columns_button_text_3'); ?></a>
 			    <?php endif; ?>
 			</div>
-			<div class="cell small-3 bucket">
+			<div class="cell medium-6 large-3 bucket">
 			    <?php
 				$image = get_field('four_columns_image_4');
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -78,7 +78,7 @@
 			    <p><?php the_field('four_columns_text_4'); ?></p>
 			    <?php endif; ?>
 			    <?php if( get_field('four_columns_button_link_4') ): ?>
-			    <a href="<?php the_field('four_columns_button_link_4'); ?>" class="button"><?php the_field('four_columns_button_text_4'); ?></a>
+			    <a href="<?php the_field('four_columns_button_link_4'); ?>"><?php the_field('four_columns_button_text_4'); ?></a>
 			    <?php endif; ?>
 			</div>
 		</div>

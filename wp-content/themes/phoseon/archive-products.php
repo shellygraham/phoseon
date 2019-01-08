@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The Products archive
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -15,18 +15,30 @@
 
 get_header(); ?>
 
-<div class="grid-container blog">
+<div class="grid-container">
 	<div class="grid-x grid-margin-x">
 		<div class="cell small-3">
-			<?php the_field('blog_intro', 'options'); ?>
-			<?php get_sidebar(); ?>
+			<h1><?php echo post_type_archive_title( '', false ); ?></h1>
+			<h3>Filter By Year:</h3>
+			<?php the_terms( $post->ID, 'news_year', '<ul><li>', '</li><li>', '</li></ul>' ); ?>
+			<h3>Filter By Category:</h3>
+			<?php the_terms( $post->ID, 'cpt_category', '<ul><li>', '</li><li>', '</li></ul>' ); ?>
 		</div>
-		<div class="cell small-8 small-offset-1">
-			<?php $args = array('post_type'=>array('post', 'in_the_news', 'press_releases'));
+		<div class="cell small-9">
+			<?php $args = array('post_type'=>array('press_releases'));
 				query_posts($args); ?>
 				<?php if ( have_posts() ) : ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'template-parts/content-index', get_post_format() ); ?>
+					<div class="grid-x grid-margin-x">
+						<div class="cell small-3">
+							<?php get_template_part( 'template-parts/featured-image' ); ?>
+						</div>
+						<div class="cell small-9">
+							<h2><?php the_title(); ?></h2>
+							<p><?php echo strip_tags( get_the_excerpt() ); ?> <a href="<?php the_permalink(); ?>"> more »</a></p>
+							<?php the_date(); ?>
+						</div>
+					</div>
 					<?php endwhile; ?>
 				<?php endif; // End have_posts() check. ?>
 				<?php if ( function_exists( 'foundationpress_pagination' ) ) :

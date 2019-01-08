@@ -29,12 +29,20 @@ h1 {
 	color: $blue;
 	font-size: 48px;
 	line-height: 57px;
+	margin-bottom: 20px;
+}
+.page-template-default {
+	h1 {
+		line-height: 69px;
+		font-size: 58px;
+	}
 }
 h2 {
 	font-family: $font-bold;
 	color: $purple;
 	font-size: 32px;
 	line-height: 38px;
+	margin-bottom: 30px;
 	a {
 		color: $blue;
 		text-decoration: underline;
@@ -42,7 +50,6 @@ h2 {
 }
 h3 {
 	font-family: $font-regular;
-	color: $blue;
 	font-size: 24px;
 	a {
 		color: $blue;
@@ -54,6 +61,17 @@ h4 {
 	color: $purple;
 	font-size: 20px;
 	line-height: 28px;	
+}
+h5 {
+	font-family: $font-bold;
+	padding: 15px 0 30px 0;
+}
+
+p {
+	font-family: $font-regular;
+	&.center-align {
+		text-align: center !important;
+	}
 }
 
 a {
@@ -79,7 +97,8 @@ body {
 }
 
 header {
-	padding-bottom: 30px;
+	padding-bottom: 10px;
+	background: #fafafa;
 	.utility {
 		.utility-sub-wrapper {
 			border-bottom: 5px solid #006eb9;
@@ -273,8 +292,12 @@ header {
 		}
 	}
 }
+#breadcrumbs {
+	margin: 1.5rem 0 1rem 0;
+}
 .hero {
 	padding-bottom: 15px;
+	padding-top: 30px;
 }
 .section-header {
 	padding-top: 15px;
@@ -290,14 +313,62 @@ header {
 .four-columns, .three-columns {
 	padding-top: 15px;
 	padding-bottom: 60px;
-	.bucket {
-		padding: 10px 10px 20px 10px;
-		background: $pale;
-		text-align: center;
-		h3 {
-			font-family: $font-bold;
-			margin: 20px 0 15px 0;
+}
+.bucket {
+	padding: 10px 10px 34px 10px;
+	background: $pale;
+	text-align: center;
+	h3 {
+		font-family: $font-bold;
+		margin: 20px 0 15px 0;
+	}
+	h4 {
+		color: #000;
+		font-family: $font-bold;
+		font-size: 18px;
+		line-height: 26px;
+	}
+	p {
+		text-align: left;
+	}
+	ul {
+		text-align: left;
+		margin-left: 2.5rem;
+	}
+	hr {
+		border-bottom: 4px solid $purple;
+		width: 50%;
+		margin: 12px auto;
+	}
+}
+.variation {
+	ul {
+		li {
+			display: inline;
+			&:last-child {
+				span {
+					display: none;
+				}
+			}
+		}		
+	}
+}
+.products-sidebar, .sidebar {
+	h3, h6 {
+		font-family: $font-bold;
+		font-size: 24px;
+		margin: 20px 0;
+		display: inline-block;
+		&:after {
+			display: block;
+			content: '';
+			width: 100%;
+			border-bottom: 4px solid $purple;
+			padding-top: 15px;
 		}
+	}
+	h5 {
+		padding: 0;
 	}
 }
 .cta-banner {
@@ -323,6 +394,37 @@ header {
 	}
 	&.blue {
 		background: $blue;
+	}
+}
+.blog {
+	article {
+		margin-bottom: 40px;
+		h2 {
+			font-size: 24px;
+			line-height: 30px;
+		}
+	}
+	h2 {
+		margin-bottom: 0;
+		&.entry-title {
+			margin-bottom: 20px;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+	.featured-hero {
+		height: 12.5rem;
+	}
+}
+.single {
+	article {
+		header {
+			background: none;
+		}
+		.featured-hero {
+			height: 31rem;
+		}
 	}
 }
 footer {

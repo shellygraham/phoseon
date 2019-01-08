@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-<div class="grid-container">
+<div class="grid-container default">
 	<div class="grid-x grid-margin-x">
 		<div class="cell small-12">
 		<?php while ( have_posts() ) : the_post(); ?>
