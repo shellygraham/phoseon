@@ -22,7 +22,7 @@ $purple: #633799;
 $blue: #006eb9;
 $dk-blue: #14679e;
 $red: #b8222a;
-$pale: #fafafa;
+$pale: #f6f6f6;
 
 h1 {
 	font-family: $font-bold;
@@ -453,11 +453,6 @@ header {
 		}
 	}
 }
-.alm-filters {
-	.alm-filter {
-		float: left;
-	}
-}
 footer {
 	position: relative;
 	margin-top: 60px;
@@ -556,12 +551,33 @@ footer {
 	}
 }
 
-.ajax-load-more-wrap ul.alm-listing li.grid-item{
+// AJAX Load More
+.product-wrapper {
+	.alm-filters {
+		.alm-filter {
+			float: left;
+			width: 25%;
+			text-align: center;
+			ul {
+				text-align: left;
+				margin-left: 60px;
+			}
+		}
+	}
+}
+.ajax-load-more-wrap ul.alm-listing li.grid-item {
    border: 1px solid #efefef;
    width: 47%;
    margin: 0 1.5% 3%;
    float: left;
    display: inline;
+   padding: 30px;
+   a {
+	   display: block;
+	   img {
+		   position: relative;
+	   }
+   }
 }
 @media screen and (max-width: 480px){
    .ajax-load-more-wrap ul.alm-listing li.grid-item{

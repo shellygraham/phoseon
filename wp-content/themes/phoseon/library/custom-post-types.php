@@ -84,83 +84,15 @@
 
 // NEWS Cats
 	
-	function news_cats_taxonomy() {  
-	    register_taxonomy(  
-	        'news_category',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
-	        array( 'in_the_news' ),       //post type name
-	        array(  
-	            'hierarchical' => true,  
-	            'label' => 'Category',  //Display name
-	            'query_var' => true,
-	            'rewrite' => array(
-	                'slug' => 'news-category', // This controls the base slug that will display before each term
-	                'with_front' => false // Don't display the category base before 
-	            ),
-	            'show_in_rest' => true,
-	        )  
-	    );  
-	}  
-	add_action( 'init', 'news_cats_taxonomy');
 
-// PR Cats
-
-	function pr_cats_taxonomy() {  
-	    register_taxonomy(  
-	        'pr_category',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
-	        array( 'press_releases' ),       //post type name
-	        array(  
-	            'hierarchical' => true,  
-	            'label' => 'Category',  //Display name
-	            'query_var' => true,
-	            'rewrite' => array(
-	                'slug' => 'pr-category', // This controls the base slug that will display before each term
-	                'with_front' => false // Don't display the category base before 
-	            ),
-	            'show_in_rest' => true,
-	        )  
-	    );  
-	}  
-	add_action( 'init', 'pr_cats_taxonomy');
 
 // NEWS Year Cats
 
-	function news_year_taxonomy() {  
-	    register_taxonomy(  
-	        'news_year',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
-	        array( 'in_the_news' ),       //post type name
-	        array(  
-	            'hierarchical' => true,  
-	            'label' => 'Year',  //Display name
-	            'query_var' => true,
-	            'rewrite' => array(
-	                'slug' => 'news-year', // This controls the base slug that will display before each term
-	                'with_front' => false // Don't display the category base before 
-	            ),
-	            'show_in_rest' => true,
-	        )  
-	    );  
-	}  
-	add_action( 'init', 'news_year_taxonomy');
+
 
 // PR Year Cats
 
-	function pr_year_taxonomy() {  
-	    register_taxonomy(  
-	        'pr_year',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
-	        array( 'press_releases' ),       //post type name
-	        array(  
-	            'hierarchical' => true,  
-	            'label' => 'Year',  //Display name
-	            'query_var' => true,
-	            'rewrite' => array(
-	                'slug' => 'pr-year', // This controls the base slug that will display before each term
-	                'with_front' => false // Don't display the category base before 
-	            ),
-	            'show_in_rest' => true,
-	        )  
-	    );  
-	}  
-	add_action( 'init', 'pr_year_taxonomy');
+
 
 // Events Cats
 
@@ -321,19 +253,39 @@
 	    );  
 	}  
 	add_action( 'init', 'wavelength_taxonomy', 0 );
+	
+// Category
 
-// Posts Year
+	function cats_taxonomy() {  
+	    register_taxonomy(  
+	        'posts_category',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'post', 'press_releases', 'in_the_news' ),       //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Category',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'categories', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'cats_taxonomy');
+
+// Year
 	
 	function postyear_taxonomy() {  
 	    register_taxonomy(  
 	        'posts_year',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
-	        array( 'posts' ),       //post type name
+	        array( 'post', 'press_releases', 'in_the_news' ),       //post type name
 	        array(  
 	            'hierarchical' => true,  
 	            'label' => 'Year',  //Display name
 	            'query_var' => true,
 	            'rewrite' => array(
-	                'slug' => 'post_year', // This controls the base slug that will display before each term
+	                'slug' => 'year', // This controls the base slug that will display before each term
 	                'with_front' => false // Don't display the category base before 
 	            ),
 	            'show_in_rest' => true,

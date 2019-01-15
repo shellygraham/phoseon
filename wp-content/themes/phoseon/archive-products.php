@@ -17,14 +17,7 @@ get_header(); ?>
 
 <div class="grid-container">
 	<div class="grid-x grid-margin-x">
-		<div class="cell small-3">
-			<h1><?php echo post_type_archive_title( '', false ); ?></h1>
-			<h3>Filter By Year:</h3>
-			<?php the_terms( $post->ID, 'news_year', '<ul><li>', '</li><li>', '</li></ul>' ); ?>
-			<h3>Filter By Category:</h3>
-			<?php the_terms( $post->ID, 'cpt_category', '<ul><li>', '</li><li>', '</li></ul>' ); ?>
-		</div>
-		<div class="cell small-9">
+		<div class="cell small-12">
 			<?php $args = array('post_type'=>array('press_releases'));
 				query_posts($args); ?>
 				<?php if ( have_posts() ) : ?>

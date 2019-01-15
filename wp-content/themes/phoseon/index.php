@@ -19,11 +19,11 @@ get_header(); ?>
 	<div class="grid-x grid-margin-x">
 		<div class="cell small-3">
 			<?php the_field('blog_intro', 'options'); ?>
-
+			<?php echo do_shortcode('[ajax_load_more_filters id="blog_filter" target="blog_all"]'); ?>
 
 		</div>
 		<div class="cell small-8 small-offset-1">
-			<?php echo do_shortcode('[ajax_load_more id="blog_all" target="blog" filters="true" filters_debug="true" repeater="template_1" post_type="post, press_releases, in_the_news" taxonomy="pr_category" taxonomy_terms="" taxonomy_operator="IN" button_label="Load More"]'); ?>
+			<?php echo do_shortcode('[ajax_load_more id="blog_all" target="blog_filter" filters="true" filters_debug="true" repeater="template_1" post_type="post, press_releases, in_the_news" taxonomy="posts_year, posts_category" taxonomy_operator="IN" button_label="Load More"] '); ?>
 		</div>
 	</div>
 </div>

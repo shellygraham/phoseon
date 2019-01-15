@@ -1,6 +1,6 @@
 <?php
 /**
- * The Press Release index
+ * The Press Release index/archive
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -17,7 +17,16 @@ get_header(); ?>
 
 <div class="grid-container">
 	<div class="grid-x grid-margin-x">
-		<div class="cell small-12">
+		<div class="cell small-3">
+			<h1><?php echo post_type_archive_title( '', false ); ?></h1>
+			<h3>Filter By Year:</h3>
+			<?php the_terms( $post->ID, 'pr_year', '<ul><li>', '</li><li>', '</li></ul>' ); ?>
+			<h3>Filter By Category:</h3>
+			<?php the_terms( $post->ID, 'pr_category', '<ul><li>', '</li><li>', '</li></ul>' ); ?>
+		</div>
+		<div class="cell small-9">
+			<?php $args = array('post_type'=>array('press_releases'));
+				query_posts($args); ?>
 				<?php if ( have_posts() ) : ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 					<div class="grid-x grid-margin-x">
