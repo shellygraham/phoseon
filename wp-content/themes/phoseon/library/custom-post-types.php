@@ -321,4 +321,23 @@
 	    );  
 	}  
 	add_action( 'init', 'wavelength_taxonomy', 0 );
+
+// Posts Year
 	
+	function postyear_taxonomy() {  
+	    register_taxonomy(  
+	        'posts_year',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'posts' ),       //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Year',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'post_year', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'postyear_taxonomy', 0 );	

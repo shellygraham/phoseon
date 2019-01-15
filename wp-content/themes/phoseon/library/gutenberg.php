@@ -45,6 +45,17 @@ function my_acf_init() {
 	// check function exists
 	if( function_exists('acf_register_block') ) {
 		
+		// register a banner hero block
+		acf_register_block(array(
+			'name'				=> 'banner-hero',
+			'title'				=> __('Banner Hero Block'),
+			'description'		=> __('Custom banner hero block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'banner-hero', 'layout' ),
+		));
+
 		// register a hero block
 		acf_register_block(array(
 			'name'				=> 'hero',

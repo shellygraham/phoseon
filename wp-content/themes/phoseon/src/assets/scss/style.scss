@@ -298,6 +298,32 @@ header {
 .hero {
 	padding-bottom: 15px;
 	padding-top: 30px;
+	.banner-hero {
+		position: relative;
+		margin-bottom: 60px;
+		.banner-hero-container {
+			position: absolute;
+			top: 0;
+			left: 50px;
+		}
+	}
+}
+.home {
+	.breadcrumbs {
+		display: none;
+	}
+	.hero {
+		background: #006eb9;
+		padding: 0;
+		margin-bottom: 40px;
+		.banner-hero {
+			background: #fff;
+			padding: 60px 0 0 0;
+			.banner-hero-container {
+				top: 30px;
+			}
+		}
+	}
 }
 .section-header {
 	padding-top: 15px;
@@ -528,4 +554,18 @@ footer {
 		text-align: right;
 		margin-top: 26px;
 	}
+}
+
+.ajax-load-more-wrap ul.alm-listing li.grid-item{
+   border: 1px solid #efefef;
+   width: 47%;
+   margin: 0 1.5% 3%;
+   float: left;
+   display: inline;
+}
+@media screen and (max-width: 480px){
+   .ajax-load-more-wrap ul.alm-listing li.grid-item{
+      width: 100%;
+      margin: 0 0 20px;  
+   }
 }

@@ -19,25 +19,11 @@ get_header(); ?>
 	<div class="grid-x grid-margin-x">
 		<div class="cell small-3">
 			<?php the_field('blog_intro', 'options'); ?>
-			<?php get_sidebar(); ?>
+
+
 		</div>
 		<div class="cell small-8 small-offset-1">
-			<?php $args = array('post_type'=>array('post', 'in_the_news', 'press_releases'));
-				query_posts($args); ?>
-				<?php if ( have_posts() ) : ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'template-parts/content-index', get_post_format() ); ?>
-					<?php endwhile; ?>
-				<?php endif; // End have_posts() check. ?>
-				<?php if ( function_exists( 'foundationpress_pagination' ) ) :
-					foundationpress_pagination();
-				elseif ( is_paged() ) :
-				?>
-			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-			</nav>
-			<?php endif; ?>
+			<?php echo do_shortcode('[ajax_load_more id="blog_all" target="blog" filters="true" filters_debug="true" repeater="template_1" post_type="post, press_releases, in_the_news" taxonomy="pr_category" taxonomy_terms="" taxonomy_operator="IN" button_label="Load More"]'); ?>
 		</div>
 	</div>
 </div>
