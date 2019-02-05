@@ -89,6 +89,17 @@ function my_acf_init() {
 			'keywords'			=> array( 'four-columns', 'layout' ),
 		));
 
+		// register a six column block
+		acf_register_block(array(
+			'name'				=> 'six-columns',
+			'title'				=> __('Six Columns'),
+			'description'		=> __('Six column block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'six-columns', 'layout' ),
+		));
+
 		// register a section header block
 		acf_register_block(array(
 			'name'				=> 'section-header',
@@ -132,6 +143,18 @@ function my_acf_init() {
 			'icon'				=> 'admin-comments',
 			'keywords'			=> array( 'cta-banner-blue', 'layout' ),
 		));
+
+		// register a cta-banner block
+		acf_register_block(array(
+			'name'				=> 'gravity-form',
+			'title'				=> __('Gravity Form'),
+			'description'		=> __('Gravity Form.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'gravity-form', 'layout' ),
+		));
+
 	}
 }
 

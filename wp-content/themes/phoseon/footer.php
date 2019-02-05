@@ -9,12 +9,14 @@
  */
 ?>
 
-<footer class="footer">
+<footer class="footer global-footer">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
+<!--
 			<div class="footer-triangle">
 				<div></div>
 			</div>
+-->
 			<div class="cell small-3 small-offset-1">
 				<?php get_template_part( 'template-parts/social-nav' ); ?>
 			</div>

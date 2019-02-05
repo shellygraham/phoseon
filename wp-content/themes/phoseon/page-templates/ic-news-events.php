@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: IC News Template
+Template Name: IC News/PR Template
 */
 get_header(); ?>
 
@@ -33,7 +33,7 @@ get_header(); ?>
 						<?php get_template_part( 'template-parts/content-news', get_post_format() ); ?>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
-				<a href="/press-releases" class="button">See more Phoseon press releases »</a>
+				<a href="/industrial-curing/resources/ic-news-events/industrial-curing-press-releases/" class="button">See more Phoseon press releases »</a>
 		</div>
 		<div class="cell small-4">
 			<h2>In the News</h2>
@@ -49,11 +49,17 @@ get_header(); ?>
 						<?php get_template_part( 'template-parts/content-news', get_post_format() ); ?>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
-				<a href="/in-the-news" class="button">See more Phoseon news »</a>
+				<a href="/industrial-curing/resources/ic-news-events/industrial-curing-in-the-news/" class="button">See more Phoseon news »</a>
 		</div>
 		<div class="cell small-4">
 			<h2>Events</h2>
-			<?php $args = array('post_type'=>array('events'));
+			<?php $args = array('post_type'=>array('events'), 'tax_query' => array(
+				        array(
+				            'taxonomy' => 'events_market',
+				            'field' => 'slug', //can be set to ID
+				            'terms' => 'industrial-curing' //if field is ID you can reference by cat/term number
+				        )
+				    ));
 				query_posts($args); ?>
 				<?php if ( have_posts() ) : ?>
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -61,7 +67,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
-				<a href="/events" class="button">See more Phoseon events »</a>
+				<a href="/industrial-curing/resources/industrial-curing-events" class="button">See more Phoseon events »</a>
 		</div>
 	</div>
 </div>

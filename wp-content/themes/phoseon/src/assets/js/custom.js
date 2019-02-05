@@ -6,4 +6,9 @@ jQuery(document).ready(function($){
 	    $('#menu-primary').foundation('hideAll');
 	});
 
+let clearBtn = document.getElementById('clear-filters');
+clearBtn.addEventListener('click', function(e){
+   window.almFiltersClear();
+});
+
 });

@@ -14,16 +14,15 @@
 	<header>
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-7">
-				<?php
-					if ( is_single() ) {
-						the_title( '<h1 class="entry-title">', '</h1>' );
-					} else {
-						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-					}
-				?>
-				<h2><?php the_field('subtitle'); ?></h2>
-				<?php the_field('intro_text'); ?>
-				<?php foundationpress_entry_meta(); ?>
+				<h1><?php the_title(); ?></h1>
+				<?php if( get_field('subtitle') ): ?>
+					<h2><?php the_field('subtitle'); ?></h2>
+				<?php endif; ?>
+				
+				<?php if( get_field('intro_text') ): ?>
+					<?php the_field('intro_text'); ?>
+				<?php endif; ?>
+				
 			</div>
 			<div class="cell small-4 small-offset-1">
 			<?php get_template_part( 'template-parts/featured-image-blog-single' ); ?>
@@ -39,5 +38,3 @@
 	</div>
 	<?php comments_template(); ?>
 </article>
-
-<?php get_footer();

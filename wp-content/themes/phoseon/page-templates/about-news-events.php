@@ -29,7 +29,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
-				<a href="/press-releases" class="button">See more Phoseon press releases »</a>
+				<a href="/blog/press-releases" class="button">See more Phoseon press releases »</a>
 		</div>
 		<div class="cell small-4">
 			<h2>In the News</h2>
@@ -41,7 +41,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
-				<a href="/in-the-news" class="button">See more Phoseon news »</a>
+				<a href="/blog/in-the-news" class="button">See more Phoseon news »</a>
 		</div>
 		<div class="cell small-4">
 			<h2>Events</h2>
@@ -53,7 +53,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
-				<a href="/events" class="button">See more Phoseon events »</a>
+				<a href="/blog/events" class="button">See more Phoseon events »</a>
 		</div>
 	</div>
 </div>
