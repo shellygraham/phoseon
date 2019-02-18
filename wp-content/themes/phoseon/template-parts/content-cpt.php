@@ -25,16 +25,14 @@
 				
 			</div>
 			<div class="cell small-4 small-offset-1">
-			<?php get_template_part( 'template-parts/featured-image-blog-single' ); ?>
+			<?php the_post_thumbnail( 'medium' ); ?>
 			</div>
 		</div>
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>
-<!--
 		Tags: <?php the_terms( $post->ID, 'cpt_tags', '', ' | ' ); ?><br />
 		Categories: <?php the_terms( $post->ID, 'cpt_category', '', ' | ' ); ?>
--->
 	</div>
 	<?php comments_template(); ?>
 </article>

@@ -10,7 +10,7 @@
 	<div class="grid-container banner-hero">
 	    <?php
 		$image = get_field('banner_hero_image');
-		$size = 'full'; // (thumbnail, medium, large, full or custom size)
+		$size = 'cta-medium'; // (thumbnail, medium, large, full or custom size)
 		if( $image ) {
 			echo wp_get_attachment_image( $image, $size );
 		}

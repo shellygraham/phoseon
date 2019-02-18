@@ -31,7 +31,7 @@
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>
-		Tags: <?php the_terms( $post->ID, 'itn_tags', '', ' | ' ); ?><br />
+		Tags: <?php the_terms( $post->ID, 'news_tags', '', ' | ' ); ?><br />
 		Categories: <?php the_terms( $post->ID, 'posts_category', '', ' | ' ); ?>
 	</div>
 	<?php comments_template(); ?>

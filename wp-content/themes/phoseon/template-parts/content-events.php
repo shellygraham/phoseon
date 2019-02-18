@@ -12,11 +12,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="grid-x grid-margin-x">
-		<div class="cell small-12">
-			<h1><?php the_title(); ?></h1>
-			<p><?php the_field('start_date'); ?> - <?php the_field('end_date'); ?></p>
-			<p><?php the_field('event_location'); ?></p>
-			<p><a href="<?php the_field('event_website'); ?>" target="_blank">Show website »</a></p>
+		<div class="cell small-12 event-posts">
+			<h2><?php the_title(); ?></h2>
+			<p><?php the_field('start_date'); ?> - <?php the_field('end_date'); ?><br>
+			<?php the_field('event_location'); ?></p>
+			<a href="<?php the_field('event_website'); ?>" target="_blank">Show website »</a>
 		</div>
 	</div>
 </article>

@@ -4,7 +4,7 @@ Template Name: IC News/PR Template
 */
 get_header(); ?>
 
-<div class="grid-container">
+<div class="grid-container news-main">
 	<div class="grid-x grid-margin-x">
 		<div class="cell small-6">
 			<?php if ( have_posts() ) : ?>
@@ -15,59 +15,165 @@ get_header(); ?>
 			<?php endif; ?>
 		</div>
 		<div class="cell small-6">
-			<?php get_template_part( 'template-parts/featured-image' ); ?>
+			<?php the_post_thumbnail('fp-small'); ?>
 		</div>
 	</div>
 	<div class="grid-x grid-margin-x">
 		<div class="cell small-4">
 			<h2>Press Releases</h2>
-			<?php $args = array('post_type'=>array('press_releases'), 'tax_query' => array(
-				        array(
-				            'taxonomy' => 'posts_category',
-				            'field' => 'slug', //can be set to ID
-				            'terms' => 'industrial-curing' //if field is ID you can reference by cat/term number
-				        )
-				    ));
-				query_posts($args); ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'template-parts/content-news', get_post_format() ); ?>
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-				<a href="/industrial-curing/resources/ic-news-events/industrial-curing-press-releases/" class="button">See more Phoseon press releases »</a>
+
+			<!-- Featured post -->
+			<?php $the_query = new WP_Query( array(
+			    'post_type' => 'press_releases',
+			    'tax_query' => array(
+					'relation' => 'AND',
+					array(
+			            'taxonomy' => 'featured',
+			            'field' => 'slug',
+						'terms' => 'yes',
+						'posts_per_page' => '1',
+					),
+					array(
+						'taxonomy' => 'pr_division',
+						'field'    => 'slug',
+						'terms'    => 'industrial-curing',
+					)
+			    ),
+			) );
+			while ( $the_query->have_posts() ) :
+			    $the_query->the_post(); ?>
+			    	<?php get_template_part( 'template-parts/content-featured-news', get_post_format() );
+			endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+
+			<!-- All non-featured posts -->
+			<?php $the_query = new WP_Query( array(
+			    'post_type' => 'press_releases',
+			    'tax_query' => array(
+					'relation' => 'AND',
+					array(
+			            'taxonomy' => 'featured',
+			            'field' => 'slug',
+						'terms' => 'yes',
+						'operator' => 'NOT IN',
+					),
+					array(
+						'taxonomy' => 'pr_division',
+						'field'    => 'slug',
+						'terms'    => 'industrial-curing',
+					)
+			    ),
+			) );
+			while ( $the_query->have_posts() ) :
+			    $the_query->the_post();
+			    	get_template_part( 'template-parts/content-news', get_post_format() );
+			endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			<a href="/life-sciences/resources/ic-news-events/industrial-curing-press-releases/" class="button">See more Phoseon press releases »</a>
 		</div>
 		<div class="cell small-4">
 			<h2>In the News</h2>
-			<?php $args = array('post_type'=>array('in_the_news'), 'tax_query' => array(
-				        array(
-				            'taxonomy' => 'posts_category',
-				            'field' => 'slug', //can be set to ID
-				            'terms' => 'industrial-curing' //if field is ID you can reference by cat/term number
-				        )
-				    ));
-				query_posts($args); ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'template-parts/content-news', get_post_format() ); ?>
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-				<a href="/industrial-curing/resources/ic-news-events/industrial-curing-in-the-news/" class="button">See more Phoseon news »</a>
+
+			<!-- Featured post -->
+			<?php $the_query = new WP_Query( array(
+			    'post_type' => 'in_the_news',
+			    'tax_query' => array(
+					'relation' => 'AND',
+					array(
+			            'taxonomy' => 'featured',
+			            'field' => 'slug',
+						'terms' => 'yes',
+						'posts_per_page' => '1',
+					),
+					array(
+						'taxonomy' => 'itn_division',
+						'field'    => 'slug',
+						'terms'    => 'industrial-curing',
+					)
+			    ),
+			) );
+			while ( $the_query->have_posts() ) :
+			    $the_query->the_post(); ?>
+			    	<?php get_template_part( 'template-parts/content-featured-news', get_post_format() );
+			endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+
+			<!-- All non-featured posts -->
+			<?php $the_query = new WP_Query( array(
+			    'post_type' => 'in_the_news',
+			    'tax_query' => array(
+					'relation' => 'AND',
+					array(
+			            'taxonomy' => 'featured',
+			            'field' => 'slug',
+						'terms' => 'yes',
+						'operator' => 'NOT IN',
+					),
+					array(
+						'taxonomy' => 'itn_division',
+						'field'    => 'slug',
+						'terms'    => 'industrial-curing',
+					)
+			    ),
+			) );
+			while ( $the_query->have_posts() ) :
+			    $the_query->the_post();
+			    	get_template_part( 'template-parts/content-news', get_post_format() );
+			endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			<a href="/life-sciences/resources/ic-news-events/industrial-curing-in-the-news/" class="button">See more Phoseon news »</a>
 		</div>
 		<div class="cell small-4">
 			<h2>Events</h2>
-			<?php $args = array('post_type'=>array('events'), 'tax_query' => array(
-				        array(
-				            'taxonomy' => 'events_market',
-				            'field' => 'slug', //can be set to ID
-				            'terms' => 'industrial-curing' //if field is ID you can reference by cat/term number
-				        )
-				    ));
-				query_posts($args); ?>
-				<?php if ( have_posts() ) : ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'template-parts/content-events', get_post_format() ); ?>
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
-				<a href="/industrial-curing/resources/industrial-curing-events" class="button">See more Phoseon events »</a>
+
+			<!-- Featured post -->
+			<?php $the_query = new WP_Query( array(
+			    'post_type' => 'events',
+			    'tax_query' => array(
+					'relation' => 'AND',
+					array(
+			            'taxonomy' => 'featured',
+			            'field' => 'slug',
+						'terms' => 'yes',
+						'posts_per_page' => '1',
+					),
+					array(
+						'taxonomy' => 'events_market',
+						'field'    => 'slug',
+						'terms'    => 'industrial-curing',
+					)
+			    ),
+			) );
+			while ( $the_query->have_posts() ) :
+			    $the_query->the_post(); ?>
+			    	<?php get_template_part( 'template-parts/content-featured-events', get_post_format() );
+			endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+
+			<!-- All non-featured posts -->
+			<?php $the_query = new WP_Query( array(
+			    'post_type' => 'events',
+			    'tax_query' => array(
+					'relation' => 'AND',
+					array(
+			            'taxonomy' => 'featured',
+			            'field' => 'slug',
+						'terms' => 'yes',
+						'operator' => 'NOT IN',
+					),
+					array(
+						'taxonomy' => 'events_market',
+						'field'    => 'slug',
+						'terms'    => 'industrial-curing',
+					)
+			    ),
+			) );
+			while ( $the_query->have_posts() ) :
+			    $the_query->the_post();
+			    	get_template_part( 'template-parts/content-events', get_post_format() );
+			endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			<a href="/life-sciences/resources/industrial-curing-events/" class="button">See more Phoseon events »</a>
 		</div>
 	</div>
 </div>

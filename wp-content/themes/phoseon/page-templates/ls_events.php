@@ -4,7 +4,7 @@ Template Name: LS Events
 */
 get_header(); ?>
 
-<div class="grid-container">
+<div class="grid-container events-feed">
 	<div class="grid-x grid-margin-x">
 		<div class="cell small-3">
 			<h1><?php the_title(); ?></h1>

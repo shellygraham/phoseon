@@ -67,6 +67,17 @@ function my_acf_init() {
 			'keywords'			=> array( 'hero', 'layout' ),
 		));
 
+		// register a two column block
+		acf_register_block(array(
+			'name'				=> 'two-columns',
+			'title'				=> __('Two Columns'),
+			'description'		=> __('Two column block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'two-columns', 'layout' ),
+		));
+
 		// register a three column block
 		acf_register_block(array(
 			'name'				=> 'three-columns',

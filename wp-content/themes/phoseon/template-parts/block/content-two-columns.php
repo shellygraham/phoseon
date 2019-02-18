@@ -10,10 +10,10 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell large-6 bucket">
-				<a href="<?php the_field('two_columns_button_link'); ?>">
+				<a class="column-img" href="<?php the_field('two_columns_button_link'); ?>">
 			    <?php
 				$image = get_field('two_columns_image');
-				$size = 'full'; // (thumbnail, medium, large, full or custom size)
+				$size = 'featured-two'; // (thumbnail, medium, large, full or custom size)
 				if( $image ) {
 					echo wp_get_attachment_image( $image, $size );
 				}
@@ -35,10 +35,10 @@
 			    <?php endif; ?>
 			</div>
 			<div class="cell large-6 bucket">
-				<a href="<?php the_field('two_columns_button_link_2'); ?>">
+				<a class="column-img" href="<?php the_field('two_columns_button_link_2'); ?>">
 			    <?php
 				$image = get_field('two_columns_image_2');
-				$size = 'full'; // (thumbnail, medium, large, full or custom size)
+				$size = 'featured-two'; // (thumbnail, medium, large, full or custom size)
 				if( $image ) {
 					echo wp_get_attachment_image( $image, $size );
 				}

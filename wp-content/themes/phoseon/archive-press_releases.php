@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-<div class="grid-container">
+<div class="grid-container pr-feed">
 	<div class="grid-x grid-margin-x">
 		<div class="cell small-3">
 			<h1><?php echo post_type_archive_title( '', false ); ?></h1>

@@ -16,6 +16,12 @@ add_image_size( 'featured-medium', 1280, 400, true );
 add_image_size( 'featured-large', 1440, 400, true );
 add_image_size( 'featured-xlarge', 1920, 400, true );
 
+add_image_size( 'featured-six', 157, 104, true );
+add_image_size( 'featured-four', 260, 162, true );
+add_image_size( 'featured-three', 400, 268, true );
+add_image_size( 'featured-two', 570, 180, true );
+
+
 // Add additional image sizes
 add_image_size( 'fp-small', 640 );
 add_image_size( 'fp-medium', 1024 );

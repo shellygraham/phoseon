@@ -394,3 +394,23 @@
 	    );  
 	}  
 	add_action( 'init', 'itn_division_taxonomy');
+
+// Featured
+	
+	function featured_taxonomy() {  
+	    register_taxonomy(  
+	        'featured',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'press_releases', 'in_the_news', 'events' ),       //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Featured Post',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'featured', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'featured_taxonomy', 0 );

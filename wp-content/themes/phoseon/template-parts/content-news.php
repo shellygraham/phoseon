@@ -10,9 +10,9 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="feed-articles">
 	<div class="grid-x grid-margin-x">
-		<div class="cell small-12">
+		<div class="cell small-12 news-post">
 			<?php
 				if ( is_single() ) {
 					the_title( '<h2 class="entry-title">', '</h2>' );
@@ -20,7 +20,6 @@
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				}
 			?>
-<!-- 				<?php foundationpress_entry_meta(); ?> -->
 		</div>
 	</div>
 </article>

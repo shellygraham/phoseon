@@ -35,7 +35,14 @@ get_header(); ?>
 										<?php foreach( $posts as $post ): ?>
 										<?php setup_postdata($post); ?>
 								    	<div class="variation cell small-3 bucket">
-											<a href="<?php the_permalink(); ?>">
+										<?php
+											$terms = get_the_terms( $post->ID , 'family_tax' );
+											 if ( $terms != null ){
+											 foreach( $terms as $term ) {
+											 print '<a class="product-bucket-link" href="/industrial-curing/products/' . $term->slug  . '">';
+											 // Get rid of the other data stored in the object, since it's not needed
+											 unset($term);
+											} } ?>
 												<h5><?php the_title(); ?></h5>
 												<?php the_post_thumbnail(); ?>
 												<p><?php the_sub_field('peak_irradiance_@_wavelength'); ?></p>

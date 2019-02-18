@@ -10,13 +10,15 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell large-4 bucket">
+				<a href="<?php the_field('three_columns_button_link'); ?>">
 			    <?php
 				$image = get_field('three_columns_image');
-				$size = 'full'; // (thumbnail, medium, large, full or custom size)
+				$size = 'featured-three'; // (thumbnail, medium, large, full or custom size)
 				if( $image ) {
 					echo wp_get_attachment_image( $image, $size );
 				}
 				?>
+				</a>
 			    <?php if( get_field('three_columns_header') ): ?>
 			    <h3><?php the_field('three_columns_header'); ?></h3>
 			    <?php endif; ?>
@@ -33,13 +35,15 @@
 			    <?php endif; ?>
 			</div>
 			<div class="cell large-4 bucket">
+				<a href="<?php the_field('three_columns_button_link_2'); ?>">
 			    <?php
 				$image = get_field('three_columns_image_2');
-				$size = 'full'; // (thumbnail, medium, large, full or custom size)
+				$size = 'featured-three'; // (thumbnail, medium, large, full or custom size)
 				if( $image ) {
 					echo wp_get_attachment_image( $image, $size );
 				}
 				?>
+				</a>
 			    <?php if( get_field('three_columns_header_2') ): ?>
 			    <h3><?php the_field('three_columns_header_2'); ?></h3>
 			    <?php endif; ?>
@@ -56,13 +60,15 @@
 			    <?php endif; ?>
 			</div>
 			<div class="cell large-4 bucket">
+				<a href="<?php the_field('three_columns_button_link_3'); ?>">
 			    <?php
 				$image = get_field('three_columns_image_3');
-				$size = 'full'; // (thumbnail, medium, large, full or custom size)
+				$size = 'featured-three'; // (thumbnail, medium, large, full or custom size)
 				if( $image ) {
 					echo wp_get_attachment_image( $image, $size );
 				}
 				?>
+				</a>
 			    <?php if( get_field('three_columns_header_3') ): ?>
 			    <h3><?php the_field('three_columns_header_3'); ?></h3>
 			    <?php endif; ?>

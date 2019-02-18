@@ -29,7 +29,7 @@ if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
 			array(
 				'container'      => false,
 				'menu_class'     => 'dropdown menu',
-				'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true" data-multi-open="false">%3$s</ul>',
+				'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu vertical menu accordion-menu" data-accordion-menu data-multi-open="false">%3$s</ul>',
 				'theme_location' => 'primary-nav',
 				'depth'          => 4,
 				'fallback_cb'    => false,
@@ -115,6 +115,7 @@ if ( ! function_exists( 'foundationpress_social_nav' ) ) {
  * 3) On your menu item, type 'has-form' in the CSS-classes field. Type 'button' in the XFN field
  * 4) Save Menu. Your menu item will now appear as a button in your top-menu
 */
+/*
 if ( ! function_exists( 'foundationpress_add_menuclass' ) ) {
 	function foundationpress_add_menuclass( $ulclass ) {
 		$find    = array( '/<a rel="button"/', '/<a title=".*?" rel="button"/' );
@@ -124,3 +125,4 @@ if ( ! function_exists( 'foundationpress_add_menuclass' ) ) {
 	}
 	add_filter( 'wp_nav_menu', 'foundationpress_add_menuclass' );
 }
+*/
