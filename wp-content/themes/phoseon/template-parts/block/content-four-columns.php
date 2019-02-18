@@ -24,7 +24,12 @@
 			    <p><?php the_field('four_columns_text'); ?></p>
 			    <?php endif; ?>
 			    <?php if( get_field('four_columns_button_link') ): ?>
-			    <a href="<?php the_field('four_columns_button_link'); ?>"><?php the_field('four_columns_button_text'); ?></a>
+			    	<?php if( get_field('button_link_style_2') == 'button2' ): ?>
+						<a href="<?php the_field('four_columns_button_link'); ?>" class="button"><?php the_field('four_columns_button_text'); ?></a>
+					<?php endif; ?>
+					<?php if( get_field('button_link_style_2') == 'link2' ): ?>
+						<a href="<?php the_field('four_columns_button_link'); ?>"><?php the_field('four_columns_button_text'); ?></a>
+					<?php endif; ?>
 			    <?php endif; ?>
 			</div>
 			<div class="cell medium-6 large-3 bucket">
@@ -42,7 +47,12 @@
 			    <p><?php the_field('four_columns_text_2'); ?></p>
 			    <?php endif; ?>
 			    <?php if( get_field('four_columns_button_link_2') ): ?>
-			    <a href="<?php the_field('four_columns_button_link_2'); ?>"><?php the_field('four_columns_button_text_2'); ?></a>
+			    	<?php if( get_field('button_link_style_2') == 'button2' ): ?>
+						<a href="<?php the_field('four_columns_button_link_2'); ?>" class="button"><?php the_field('four_columns_button_text_2'); ?></a>
+					<?php endif; ?>
+					<?php if( get_field('button_link_style_2') == 'link2' ): ?>
+						<a href="<?php the_field('four_columns_button_link_2'); ?>"><?php the_field('four_columns_button_text_2'); ?></a>
+					<?php endif; ?>
 			    <?php endif; ?>
 			</div>
 			<div class="cell medium-6 large-3 bucket">
@@ -60,7 +70,12 @@
 			    <p><?php the_field('four_columns_text_3'); ?></p>
 			    <?php endif; ?>
 			    <?php if( get_field('four_columns_button_link_3') ): ?>
-			    <a href="<?php the_field('four_columns_button_link_3'); ?>"><?php the_field('four_columns_button_text_3'); ?></a>
+			    	<?php if( get_field('button_link_style_2') == 'button2' ): ?>
+						<a href="<?php the_field('four_columns_button_link_3'); ?>" class="button"><?php the_field('four_columns_button_text_3'); ?></a>
+					<?php endif; ?>
+					<?php if( get_field('button_link_style_2') == 'link2' ): ?>
+						<a href="<?php the_field('four_columns_button_link_3'); ?>"><?php the_field('four_columns_button_text_3'); ?></a>
+					<?php endif; ?>
 			    <?php endif; ?>
 			</div>
 			<div class="cell medium-6 large-3 bucket">
@@ -78,7 +93,12 @@
 			    <p><?php the_field('four_columns_text_4'); ?></p>
 			    <?php endif; ?>
 			    <?php if( get_field('four_columns_button_link_4') ): ?>
-			    <a href="<?php the_field('four_columns_button_link_4'); ?>"><?php the_field('four_columns_button_text_4'); ?></a>
+			    	<?php if( get_field('button_link_style_2') == 'button2' ): ?>
+						<a href="<?php the_field('four_columns_button_link_4'); ?>" class="button"><?php the_field('four_columns_button_text_4'); ?></a>
+					<?php endif; ?>
+					<?php if( get_field('button_link_style_2') == 'link2' ): ?>
+						<a href="<?php the_field('four_columns_button_link_4'); ?>"><?php the_field('four_columns_button_text_4'); ?></a>
+					<?php endif; ?>
 			    <?php endif; ?>
 			</div>
 		</div>

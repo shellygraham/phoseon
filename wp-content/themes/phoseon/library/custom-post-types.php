@@ -60,6 +60,7 @@
 				'show_in_rest' => true,
 				'has_archive' => true,
 				'rewrite' => array('slug' => 'events'),
+				'supports' => array( 'title', 'thumbnail', 'revisions' ),
 			)
 		);
 
@@ -94,25 +95,45 @@
 
 
 
-// Events Cats
+// Events Market
 
-	function events_cpt_taxonomy() {  
+	function events_market_taxonomy() {  
 	    register_taxonomy(  
-	        'events_cats',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        'events_market',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
 	        'events',        //post type name
 	        array(  
 	            'hierarchical' => true,  
-	            'label' => 'Division',  //Display name
+	            'label' => 'Market',  //Display name
 	            'query_var' => true,
 	            'rewrite' => array(
-	                'slug' => 'events_cats', // This controls the base slug that will display before each term
+	                'slug' => 'events_market', // This controls the base slug that will display before each term
 	                'with_front' => false // Don't display the category base before 
 	            ),
 	            'show_in_rest' => true,
 	        )  
 	    );  
 	}  
-	add_action( 'init', 'events_cpt_taxonomy');
+	add_action( 'init', 'events_market_taxonomy');
+
+// Events Region
+
+	function events_region_taxonomy() {  
+	    register_taxonomy(  
+	        'events_region',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        'events',        //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Region',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'events_region', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'events_region_taxonomy');
 
 // Emitting Cats
 
@@ -134,6 +155,26 @@
 	}  
 	add_action( 'init', 'products_emitting_taxonomy');
 
+// Emitting Ranges
+
+	function products_emitting_ranges() {  
+	    register_taxonomy(  
+	        'emitting_ranges',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        'products',        //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Emitting Window Ranges',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'emitting_ranges', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'products_emitting_ranges');
+
 // Irriadiance Cats
 
 	function products_irradiance_taxonomy() {  
@@ -153,6 +194,26 @@
 	    );  
 	}  
 	add_action( 'init', 'products_irradiance_taxonomy');
+
+// Irriadiance Ranges
+
+	function products_irradiance_ranges() {  
+	    register_taxonomy(  
+	        'irradiance_ranges',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        'products',        //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Irradiance Wavelength Range',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'irradiance_ranges', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'products_irradiance_ranges');
 
 // NEWS Tags
 	
@@ -279,7 +340,7 @@
 	function postyear_taxonomy() {  
 	    register_taxonomy(  
 	        'posts_year',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
-	        array( 'post', 'press_releases', 'in_the_news' ),       //post type name
+	        array( 'post', 'press_releases', 'in_the_news', 'events' ),       //post type name
 	        array(  
 	            'hierarchical' => true,  
 	            'label' => 'Year',  //Display name
@@ -292,4 +353,44 @@
 	        )  
 	    );  
 	}  
-	add_action( 'init', 'postyear_taxonomy', 0 );	
+	add_action( 'init', 'postyear_taxonomy', 0 );
+
+// PR Division
+
+	function pr_division_taxonomy() {  
+	    register_taxonomy(  
+	        'pr_division',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'press_releases' ),       //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Division',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'pr_division', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'pr_division_taxonomy');
+
+// ITN Division
+
+	function itn_division_taxonomy() {  
+	    register_taxonomy(  
+	        'itn_division',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'in_the_news' ),       //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Division',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'news_division', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'itn_division_taxonomy');
