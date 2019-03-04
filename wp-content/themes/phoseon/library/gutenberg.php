@@ -166,6 +166,28 @@ function my_acf_init() {
 			'keywords'			=> array( 'gravity-form', 'layout' ),
 		));
 
+		// register a two column + pr feed block
+		acf_register_block(array(
+			'name'				=> 'two-column-pr-feed',
+			'title'				=> __('Two Columns + PR Feed'),
+			'description'		=> __('Two column + pr feed block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'two-column-pr-feed', 'layout' ),
+		));
+
+		// register a two column + events feed block
+		acf_register_block(array(
+			'name'				=> 'two-column-events-feed',
+			'title'				=> __('Two Columns + Events Feed'),
+			'description'		=> __('Two column + events feed block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'two-column-events-feed', 'layout' ),
+		));
+
 	}
 }
 

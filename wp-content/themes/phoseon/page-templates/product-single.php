@@ -41,7 +41,7 @@ get_header(); ?>
 					<?php the_post_thumbnail(); ?>
 	
 					<hr />
-					<h4>Emitting Window Sizes:</h4>
+					<h4><?php the_field('emitting_window_sizes','options'); ?>:</h4>
 					<ul>
 					<?php
 						$term_list = wp_get_post_terms($post->ID, 'emitting_cats', array("fields" => "all"));
@@ -51,7 +51,7 @@ get_header(); ?>
 					?>
 					</ul>
 					<hr />
-					<h4>Peak Irradiance @ Wavelength:</h4>
+					<h4><?php the_field('peak_irradiance_wavelength','options'); ?>:</h4>
 					<ul>
 					<?php
 						$term_list2 = wp_get_post_terms($post->ID, 'irradiance_cats', array("fields" => "all"));

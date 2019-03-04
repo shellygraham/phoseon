@@ -37,11 +37,11 @@ get_header(); ?>
 							?>
 							<h3><?php the_sub_field('product_family_name'); ?></h3>
 							<hr />
-							<h4>Curing Area (mm)</h4>
+							<h4><?php the_sub_field('curing_area_header'); ?></h4>
 							<p class="center-align"><?php the_sub_field('curing_area'); ?></p>
 							<hr />
-							<h4>Peak Irradiance:</h4>
-							<p class="center-align">Up to <?php the_sub_field('peak_irradiance'); ?></p>
+							<h4><?php the_sub_field('peak_irradiance_header'); ?></h4>
+							<p class="center-align"><?php the_sub_field('peak_irradiance'); ?></p>
 				    	</a>
 			        </div>
 					<?php endwhile; ?>

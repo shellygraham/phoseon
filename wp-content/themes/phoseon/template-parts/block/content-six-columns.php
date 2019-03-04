@@ -84,6 +84,7 @@
 					<?php endif; ?>
 			    <?php endif; ?>
 			</div>
+			<?php if( get_field('six_columns_text_4') ): ?>
 			<div class="cell small-6 medium-3 large-2 bucket">
 				<a href="<?php the_field('six_columns_button_link_4'); ?>">
 			    <?php
@@ -94,12 +95,10 @@
 				}
 				?>
 				</a>
-			    <?php if( get_field('six_columns_header_4') ): ?>
+				<?php if( get_field('six_columns_header_4') ): ?>
 			    <h3><?php the_field('six_columns_header_4'); ?></h3>
 			    <?php endif; ?>
-			    <?php if( get_field('six_columns_text_4') ): ?>
 			    <p><?php the_field('six_columns_text_4'); ?></p>
-			    <?php endif; ?>
 			    <?php if( get_field('six_columns_button_link_4') ): ?>
 			    	<?php if( get_field('button_link_style_3') == 'button3' ): ?>
 						<a href="<?php the_field('six_columns_button_link_4'); ?>" class="button"><?php the_field('six_columns_button_text_4'); ?></a>
@@ -109,6 +108,8 @@
 					<?php endif; ?>
 			    <?php endif; ?>
 			</div>
+			<?php endif; ?>
+			<?php if( get_field('six_columns_text_5') ): ?>
 			<div class="cell small-6 medium-3 large-2 bucket">
 				<a href="<?php the_field('six_columns_button_link_5'); ?>">
 			    <?php
@@ -119,12 +120,10 @@
 				}
 				?>
 				</a>
-			    <?php if( get_field('six_columns_header_5') ): ?>
+				<?php if( get_field('six_columns_header_5') ): ?>
 			    <h3><?php the_field('six_columns_header_5'); ?></h3>
 			    <?php endif; ?>
-			    <?php if( get_field('six_columns_text_5') ): ?>
 			    <p><?php the_field('six_columns_text_5'); ?></p>
-			    <?php endif; ?>
 			    <?php if( get_field('six_columns_button_link_5') ): ?>
 			    	<?php if( get_field('button_link_style_3') == 'button3' ): ?>
 						<a href="<?php the_field('six_columns_button_link_5'); ?>" class="button"><?php the_field('six_columns_button_text_5'); ?></a>
@@ -134,6 +133,8 @@
 					<?php endif; ?>
 			    <?php endif; ?>
 			</div>
+			<?php endif; ?>
+			<?php if( get_field('six_columns_text_6') ): ?>
 			<div class="cell small-6 medium-3 large-2 bucket">
 				<a href="<?php the_field('six_columns_button_link_6'); ?>">
 			    <?php
@@ -144,12 +145,10 @@
 				}
 				?>
 				</a>
-			    <?php if( get_field('six_columns_header_6') ): ?>
+				<?php if( get_field('six_columns_header_6') ): ?>
 			    <h3><?php the_field('six_columns_header_6'); ?></h3>
 			    <?php endif; ?>
-			    <?php if( get_field('six_columns_text_6') ): ?>
 			    <p><?php the_field('six_columns_text_6'); ?></p>
-			    <?php endif; ?>
 			    <?php if( get_field('six_columns_button_link_6') ): ?>
 			    	<?php if( get_field('button_link_style_3') == 'button3' ): ?>
 						<a href="<?php the_field('six_columns_button_link_6'); ?>" class="button"><?php the_field('six_columns_button_text_6'); ?></a>
@@ -159,6 +158,7 @@
 					<?php endif; ?>
 			    <?php endif; ?>
 			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>
