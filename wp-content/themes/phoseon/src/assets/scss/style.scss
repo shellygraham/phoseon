@@ -79,6 +79,9 @@ a {
 	&:hover {
 		color: $dk-blue;
 	}
+	&:focus {
+		color: $blue;
+	}
 }
 
 .button {
@@ -753,6 +756,15 @@ footer {
 	right: 0;
     border-color: #006eb9 transparent transparent;
 }
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+    right: 0;
+    border-color: #006eb9 transparent transparent;
+}
+.accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
+    transform-origin: 50% 50%;
+    right: 0;
+    border-color: #006eb9 transparent transparent;
+}
 .accordion-item {
 	.accordion-title {
 		font-size: 24px;
@@ -868,4 +880,21 @@ footer {
 		}		
 	}
 }
-
+.crc {
+	#menu-primary {
+		li {
+			a {
+				color: $blue;
+			    padding: 8px 0;
+			}
+		}
+		.submenu {
+			margin-left: 15px;
+			li {
+				a {
+					color: $blue;
+				}
+			}
+		}	
+	}
+}

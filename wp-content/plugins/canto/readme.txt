@@ -1,9 +1,9 @@
 === Canto ===
 Contributors: Canto Inc, ianthekid, flightjim
 Tags: digital asset management, brand management, cloud storage, DAM, file storage, image management, photo library, Canto
-Requires at least: 4.4
-Tested up to: 4.9.6
-Stable tag: 1.2.1
+Requires at least: 5.0
+Tested up to: 5.1
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,15 +27,17 @@ Installing Canto wordpress plugin can be done either by searching for "Canto" vi
 2. Upload the ZIP file through the 'Plugins > Add New > Upload' screen in your WordPress dashboard
 3. Activate the plugin through the 'Plugins' menu in WordPress
 
-Configure and authorize your account under "Settings > Canto" left nav menu. Click "Connect" and enter in your account credentials. You will be automatically redirected back to Wordpress.
+Configure and authorize your account under "Settings > Canto" left nav menu. Click "Connect" and enter in your account credentials. You will be automatically redirected back to WordPress.
 
 All set, enjoy!
 
 == Screenshots ==
 
-1. Add Media seamless integration
-2. Insert into Post with customized image sizes
-3. Canto Plugin settings to integrate with your account
+1. Find media assets quickly with Canto digital asset management
+2. Insert into Post directly from our CDN
+3. Inserts a native Gutenberg block with customizable options and formatting
+4. Canto block under Common Blocks
+5. Plugin settings include duplicate checking and automatic updates for assets imported in WordPress
 
 == Frequently Asked Questions ==
 
@@ -52,6 +54,10 @@ Unfortunately not. However, you are welcome to sign up today for free! <a href="
 We recommend you to connect to your Canto account using an administrator account.
 
 == Changelog ==
+
+= 1.3.0 =
+* 2019-03-06
+* NEW: Gutenberg block compatibility. Canto block created to import assets into Gutenberg with native block types based on file type
 
 = 1.2.1 =
 * 2018-11-07
@@ -72,6 +78,6 @@ We recommend you to connect to your Canto account using an administrator account
 
 == Upgrade Notice ==
 
-= 1.2.1 =
-* 2018-11-07
-* FIX: Edge browser compatibility for CSS and JS loading issues
+= 1.3.0 =
+* 2019-03-06
+* NEW: Gutenberg block compatibility. Canto block created to import assets into Gutenberg with native block types based on file type

@@ -1,0 +1,1002 @@
+# Loco Gettext template
+msgid ""
+msgstr ""
+"Project-Id-Version: real-media-library\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-31 13:53+0200\n"
+"POT-Revision-Date: Wed Feb 28 2018 15:58:54 GMT+0100 (Mitteleuropäische "
+"Zeit)\n"
+"PO-Revision-Date: 2019-01-11 15:43+0100\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"Last-Translator: Jarek Januszewski <mail@jarekjnuszewski.com>\n"
+"Language: pl_PL\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../inc/comp/WPML.class.php:183
+msgid "WPML: Automatically move translations"
+msgstr "WPML: Automatycznie przenoszenie tłumaczenia"
+
+#: ../inc/comp/WPML.class.php:194 ../inc/comp/PolyLang.class.php:58
+msgid "If you move a file also move the associated translation files."
+msgstr ""
+"Jeśli przeniesiesz plik, przenieś również skojarzone pliki tłumaczenia."
+
+#: ../inc/comp/PolyLang.class.php:47
+msgid "PolyLang: Automatically move translations"
+msgstr "PolyLang: Automatycznie przenoszenie tłumaczenia"
+
+#: ../inc/comp/ExImport.class.php:26
+msgid "Export / Import folders"
+msgstr "Eksport/Import folderów"
+
+#: ../inc/comp/ExImport.class.php:35
+msgid "Import taxonomy categories"
+msgstr "Importuj kategorie taksonomii"
+
+#: ../inc/comp/ExImport.class.php:47
+msgid "Export"
+msgstr "Eksport"
+
+#: ../inc/comp/ExImport.class.php:52 ../inc/comp/ExImport.class.php:64
+msgid "Import"
+msgstr "Import"
+
+#: ../inc/comp/ExImport.class.php:53
+msgid ""
+"The export process will respect all available folders. The import process "
+"will not touch your existing structure and please make sure the import data "
+"does not have duplicate names with your current hierarchy."
+msgstr ""
+"Proces eksportu będzie uwzględniał wszystkie dostępne foldery. Proces "
+"importu nie narusza istniejącej struktury, jednak upewnij się, że dane "
+"importowane nie mają zduplikowanych z bieżącą hierarchią nazw."
+
+#: ../inc/comp/ExImport.class.php:54
+msgid "Exported data:"
+msgstr "Eksportowane dane:"
+
+#: ../inc/comp/ExImport.class.php:55
+msgid "Import data:"
+msgstr "Importuj dane:"
+
+#: ../inc/comp/ExImport.class.php:65
+msgid "Imports categories and post relations."
+msgstr "Importuje kategorie i powiązania z postami."
+
+#: ../inc/api/attachment.php:110 ../inc/api/attachment.php:130 ..
+#: /inc/api/attachment.php:146 ../inc/general/REST.class.php:71
+#: /inc/general/REST.class.php:82
+msgid "The given folder was not found."
+msgstr "Folder nie został znaleziony."
+
+#: ../inc/metadata/Meta.class.php:44
+msgid "Name"
+msgstr "Nazwa"
+
+#: ../inc/metadata/Meta.class.php:50
+msgid "Path"
+msgstr "Ścieżka"
+
+#: ../inc/metadata/Meta.class.php:58
+msgid "Folder type"
+msgstr "Typ folderu"
+
+#: ../inc/metadata/Meta.class.php:60
+msgid "What does this mean?"
+msgstr "Co to znaczy?"
+
+#: ../inc/metadata/Meta.class.php:132
+msgid "General"
+msgstr "Ogólne"
+
+#: ../inc/metadata/Actions.class.php:42
+msgid "Actions"
+msgstr "Akcje"
+
+#: ../inc/metadata/Description.class.php:28
+msgid "Description"
+msgstr "Opis"
+
+#: ../inc/metadata/CoverImage.class.php:43
+msgid "Cover image"
+msgstr "Okładka"
+
+#: ../inc/folder/Collection.class.php:26
+msgid "A collection can contain no files."
+msgstr "Kolekcja nie może zawierać żadnych plików."
+
+#: ../inc/folder/Collection.class.php:68
+msgid "Collection"
+msgstr "Kolekcja"
+
+#: ../inc/folder/Collection.class.php:72
+msgid ""
+"A collection can contain no files. But you can create there other "
+"collections and <strong>galleries</strong>."
+msgstr ""
+"Kolekcja nie może zawierać żadnych plików. Ale można tworzyć w niej inne "
+"kolekcje oraz <strong> galerie </strong>."
+
+#: ../inc/folder/Gallery.class.php:25
+msgid "You can only move images to a gallery."
+msgstr "Obrazy można przenosić tylko do galerii."
+
+#: ../inc/folder/Gallery.class.php:68
+msgid "Gallery"
+msgstr "Galeria"
+
+#: ../inc/folder/Gallery.class.php:72
+msgid ""
+"A gallery can contain only images. If you want to display a gallery go to a "
+"post and have a look at the visual editor buttons."
+msgstr ""
+"Galeria może zawierać tylko obrazy. Jeśli chcesz wyświetlić galerię, przejdź "
+"do postu i użyj przycisków edytora."
+
+#: ../inc/folder/Creatable.class.php:98 ../inc/order/Sortable.class.php:75 ..
+#: /inc/general/Util.class.php:87
+msgid "Something went wrong."
+msgstr "Coś poszło nie tak."
+
+#: ../inc/folder/Creatable.class.php:206
+msgid "You need to provide a set of files."
+msgstr "Należy podać zestaw plików."
+
+#: ../inc/folder/Creatable.class.php:298
+msgid "The folder could not be created in the database."
+msgstr "Nie można utworzyć folderu w bazie danych."
+
+#: ../inc/folder/Creatable.class.php:301
+msgid "The folder could not be created because it already exists."
+msgstr "Nie można utworzyć folderu, ponieważ już istnieje."
+
+#: ../inc/folder/Creatable.class.php:360
+#: ../inc/attachment/CustomField.class.php:41
+#: ../inc/general/Backend.class.php:135
+msgid "Folder"
+msgstr "Folder"
+
+#: ../inc/folder/Creatable.class.php:374
+msgid ""
+"A folder can contain every type of file or a collection, but no gallery."
+msgstr "Folder może zawierać każdy typ pliku lub kolekcję, ale nie galerie."
+
+#: ../inc/folder/Creatable.class.php:403
+msgid "The given parent does not exist to set the parent for this folder."
+msgstr ""
+"Dany obiekt nadrzędny nie istnieje by ustawić obiekt nadrzędny dla tego "
+"folderu."
+
+#: ../inc/folder/Creatable.class.php:408
+msgid "You are not allowed to change the parent for this folder."
+msgstr "Nie można zmienić obiektu nadrzędnego dla tego folderu."
+
+#: ../inc/folder/Creatable.class.php:413
+msgid "The given parent does not allow the folder type."
+msgstr "Dany element nadrzędny nie zezwala na taki typ folderu."
+
+#: ../inc/folder/Creatable.class.php:481
+#, php-format
+msgid "'%s' is not a valid folder name."
+msgstr "' %s ' nie jest prawidłową nazwą folderu."
+
+#: ../inc/folder/CRUD.class.php:94
+msgid "The given folder does not exist or you can not rename this folder."
+msgstr "Dany folder nie istnieje lub nie można zmienić jego nazwy."
+
+#: ../inc/folder/CRUD.class.php:154
+msgid "The given folder does not exist."
+msgstr "Podany folder nie istnieje."
+
+#: ../inc/folder/Root.class.php:21 ../inc/admin_footer/sidebar.dummy.php:82
+msgid "Unorganized"
+msgstr "Nieprzypisane"
+
+#: ../inc/folder/Root.class.php:75
+msgid "Uncategorized"
+msgstr "Nieskategoryzowane"
+
+#: ../inc/folder/Root.class.php:79
+msgid ""
+"Uncategorized is the same as a root folder. Here you can find all files "
+"which are not assigned to a folder."
+msgstr ""
+"Folder <em>Nieprzypisane</em> jest tożsamy z folderem głównym. Są w nim "
+"wszystkie pliki, nieprzypisane do folderów."
+
+#: ../inc/order/GalleryOrder.class.php:88
+msgid "Order by title ascending"
+msgstr "Sortuj po tytule rosnąco"
+
+#: ../inc/order/GalleryOrder.class.php:92
+msgid "Order by title descending"
+msgstr "Sortuj po tytule malejąco"
+
+#: ../inc/order/GalleryOrder.class.php:96
+msgid "Order by filename ascending"
+msgstr "Sortuj po nazwie pliku rosnąco"
+
+#: ../inc/order/GalleryOrder.class.php:100
+msgid "Order by filename descending"
+msgstr "Sortuj po nazwie pliku malejąco"
+
+#: ../inc/order/GalleryOrder.class.php:104
+msgid "Natural order by filename ascending"
+msgstr "Naturalne sortowanie po nazwie pliku rosnąco"
+
+#: ../inc/order/GalleryOrder.class.php:108
+msgid "Natural order by filename descending"
+msgstr "Naturalne sortowanie po nazwie pliku malejąco"
+
+#: ../inc/order/GalleryOrder.class.php:112
+msgid "Order by ID ascending"
+msgstr "Sortuj po ID rosnąco"
+
+#: ../inc/order/GalleryOrder.class.php:116
+msgid "Order by ID descending"
+msgstr "Sortuj po ID malejąco"
+
+#: ../inc/order/GalleryOrder.class.php:133
+msgid "Order"
+msgstr "Sortowanie"
+
+#: ../inc/order/GalleryOrder.class.php:147
+msgid "Apply"
+msgstr "Zastosuj"
+
+#: ../inc/order/GalleryOrder.class.php:150
+msgid "Apply order automatically (please \"Apply\" order then save)"
+msgstr ""
+"Zastosuj sortowanie automatycznie (kliknij “Zastosuj” sortowanie a następnie "
+"zapisz)"
+
+#: ../inc/order/GalleryOrder.class.php:169
+msgid "Please apply an order to the folder."
+msgstr "Zastosuj sortowanie dla folderu."
+
+#: ../inc/order/Options.class.php:27
+msgid "RealMediaLibrary:Gallery order"
+msgstr "RealMediaLibrary:Sortowanie Galerii"
+
+#: ../inc/order/Options.class.php:34
+msgid "Reset the order of all galleries"
+msgstr "Resetuj sortowanie we wszystkich galeriach"
+
+#: ../inc/order/Options.class.php:45 ../inc/general/Options.class.php:178
+msgid "Reset"
+msgstr "Resetuj"
+
+#: ../inc/order/Options.class.php:61 ../inc/order/Options.class.php:81
+msgid "Reset order"
+msgstr "Resetuj sortowanie"
+
+#: ../inc/order/Options.class.php:66
+msgid "Reindex order"
+msgstr "Reindeksuj sortowanie"
+
+#: ../inc/order/Options.class.php:86
+msgid "Reset to last custom order"
+msgstr "Resetuj do sortowania własnego"
+
+#: ../inc/order/Sortable.class.php:33
+msgid "The given folder does not allow to reorder the files."
+msgstr "Dany folder nie zezwala na przesortowanie plików."
+
+#: ../inc/admin_footer/sidebar.dummy.php:41
+msgid "Folders"
+msgstr "Foldery"
+
+#: ../inc/admin_footer/sidebar.dummy.php:49
+msgid "Restrictions"
+msgstr "Ograniczenia"
+
+#: ../inc/admin_footer/sidebar.dummy.php:58
+msgid "Remaining time"
+msgstr "Pozostały czas"
+
+#: ../inc/admin_footer/sidebar.dummy.php:79
+msgid "All Files"
+msgstr "Wszystkie pliki"
+
+#: ../inc/admin_footer/sidebar.dummy.php:88
+msgid "Search folders..."
+msgstr "Przeszukaj foldery…"
+
+#: ../inc/admin_footer/sidebar.dummy.php:93
+msgid "No search results."
+msgstr "Brak wyników wyszukiwania."
+
+#: ../inc/admin_footer/sidebar.dummy.php:100
+msgid "You have no folders."
+msgstr "Nie posiadasz folderów."
+
+#: ../inc/admin_footer/sidebar.dummy.php:101
+msgid ""
+"Simply create a folder by clicking the above button. You can also create a "
+"collection-gallery relation."
+msgstr ""
+"Utwórz folder, klikając powyższy przycisk. Możesz także utworzyć powiązanie "
+"kolekcja-galeria."
+
+#: ../inc/admin_footer/sidebar.dummy.php:111
+msgid "Tip: Make your photos shine with Justified&nbsp;Image&nbsp;Grid"
+msgstr ""
+"Porada: Pozwól swoim zdjęciom wyróżnić się dzięki Justified&nbsp;Image&nbsp;"
+"Grid"
+
+#: ../inc/attachment/CustomField.class.php:36
+msgid ""
+"When you move this shortcut, the folder location of the source/main file "
+"will not be changed."
+msgstr ""
+"Jeśli przeniesiesz ten skrót, lokalizacja źródła/głównego pliku nie zostanie "
+"zmieniona."
+
+#: ../inc/attachment/CustomField.class.php:37
+msgid ""
+"When you move this attachment, the folder location of the associated "
+"shortcuts of this attachment will not be changed."
+msgstr ""
+"Jeśli przeniesiesz ten załącznik, lokalizacja folderu powiązanych skrótów "
+"tego załącznika nie ulegnie zmianie."
+
+#: ../inc/attachment/CustomField.class.php:70
+msgid "Shortcut infos"
+msgstr "Info skrótu"
+
+#: ../inc/attachment/CustomField.class.php:75
+#: ../inc/general/Backend.class.php:33
+msgid ""
+"This is a shortcut of a media library file. Shortcuts doesn't need any "
+"physical storage <strong>(0kb)</strong>. If you want to change the file "
+"itself, you must do this in the original file (for example replace media "
+"file through a plugin).<br/>Note also that the fields in the shortcuts can "
+"be different to the original file, for example \"Title\", \"Description\" or "
+"\"Caption\"."
+msgstr ""
+"Jest to skrót pliku biblioteki mediów. Skróty nie wymagają fizycznej pamięci "
+"masowej <strong> (0kb) </strong>. Jeśli chcesz zmienić sam plik, musisz to "
+"zrobić w oryginalnym pliku (na przykład zastąpić plik medium za pomocą "
+"wtyczki). <br/> Należy również zauważyć, że pola w skrótach mogą być inne "
+"niż oryginalny plik, na przykład “Tytuł\", “Opis\" lub “Podpis\"."
+
+#: ../inc/attachment/CustomField.class.php:81
+#, php-format
+msgid "For this file is one shortcut available in the following folder:"
+msgid_plural ""
+"For this file are %s shortcuts available in the following folders:"
+msgstr[0] "Dla tego pliku dostępny jest jeden skrót w następującym folderze:"
+msgstr[1] ""
+"Dla tego pliku dostępnych jest %s skrótów w następujących folderach:"
+msgstr[2] ""
+"Dla tego pliku dostępnych jest %s skrótów w następujących folderach:"
+
+#: ../inc/attachment/CustomField.class.php:89
+msgid ""
+"This file has no associated shortcuts. You can create shortcuts by moving "
+"files per mouse and hold any key."
+msgstr ""
+"Ten plik nie ma przypisanych skrótów. Możesz tworzyć skróty przenosząc pliki "
+"myszą przy wciśniętym dowolnym przycisku."
+
+#: ../inc/attachment/Permissions.class.php:26
+msgid "You are not allowed to insert files here."
+msgstr "Nie masz uprawnień do umieszczenia tu plików."
+
+#: ../inc/attachment/Permissions.class.php:35
+msgid "You are not allowed to move the file."
+msgstr "Nie masz uprawnień do przeniesienia pliku."
+
+#: ../inc/attachment/Permissions.class.php:51
+msgid "You are not allowed to create a subfolder here."
+msgstr "Nie masz uprawnień do utworzenia tu podfolderu."
+
+#: ../inc/attachment/Permissions.class.php:64
+msgid "You are not allowed to delete this folder."
+msgstr "Nie masz uprawnień do usunięcia tego folderu."
+
+#: ../inc/attachment/Permissions.class.php:77
+msgid "You are not allowed to rename this folder."
+msgstr "Nie masz uprawnień do zmiany nazwy tego folderu."
+
+#: ../inc/attachment/Upload.class.php:47
+msgid ""
+"You can simply upload files directly to a folder. Select a folder and upload "
+"files."
+msgstr ""
+"Możesz w prosty sposób dodać pliki wprost do folderu. Zaznacz folder i "
+"prześlij pliki."
+
+#: ../inc/attachment/Upload.class.php:50
+msgid "Loading..."
+msgstr "Wysyłam…"
+
+#: ../inc/attachment/Upload.class.php:51
+msgid "upload to folder"
+msgstr "wyślij do folderu"
+
+#: ../inc/general/FolderShortcode.class.php:70
+msgid "Select"
+msgstr "Zaznacz"
+
+#: ../inc/general/Options.class.php:26
+msgid "RealMediaLibrary:General"
+msgstr "RealMediaLibrary:Ogólne"
+
+#: ../inc/general/Options.class.php:34
+msgid "Hide upload preview"
+msgstr "Ukryj podgląd przesyłu"
+
+#: ../inc/general/Options.class.php:43
+msgid "Allow all folders for folder gallery"
+msgstr "Pozwól wszystkim folderom na dodanie do folderu galerii"
+
+#: ../inc/general/Options.class.php:52
+msgid "Load RML functionality in frontend"
+msgstr "Ładuj funkcjonalności RML na frontend"
+
+#: ../inc/general/Options.class.php:61
+msgid "Hide info links"
+msgstr "Ukryj linki info"
+
+#: ../inc/general/Options.class.php:105
+msgid "RealMediaLibrary:Reset"
+msgstr "RealMediaLibrary:Reset"
+
+#: ../inc/general/Options.class.php:112
+msgid "Wipe all settings (folders, attachment relations)"
+msgstr "Wyważ wszystkie ustawienia (foldery, relacje załączników)"
+
+#: ../inc/general/Options.class.php:120
+msgid "Reset folder count cache"
+msgstr "Resetuj cache liczebności folderów"
+
+#: ../inc/general/Options.class.php:128
+msgid "Reset names, slugs and absolute pathes"
+msgstr "Resetuj nazwy, slugi i ścieżki absolutne"
+
+#: ../inc/general/Options.class.php:137
+msgid "RealMediaLibrary:Migration"
+msgstr "RealMediaLibrary:Migracja"
+
+#: ../inc/general/Options.class.php:163
+msgid "Wipe attachment relations"
+msgstr "Wymaż relacje załącznika"
+
+#: ../inc/general/Options.class.php:164
+msgid "Wipe all"
+msgstr "Wymaż wszystko"
+
+#: ../inc/general/Options.class.php:171
+msgid "Reset count"
+msgstr "Resetuj liczebność"
+
+#: ../inc/general/Options.class.php:191
+msgid "Check this if your uploader does not work properly."
+msgstr "Zaznacz, jeśli Twój uploader nie działa poprawnie."
+
+#: ../inc/general/Options.class.php:198
+msgid "Links on the sidebar (Version, Tips, ...)"
+msgstr "Linki na pasku bocznym (Wersja, Podpowiedzi, …)"
+
+#: ../inc/general/Options.class.php:205
+msgid "If you are using a front end page builder, for example Visual Composer"
+msgstr "Jeśli używasz frontendowego page buildera, na przykład Visual Composer"
+
+#: ../inc/general/Migration.class.php:115
+msgid "Migration <= 2.7.2"
+msgstr "Migracja <= 2.7.2"
+
+#: ../inc/general/Migration.class.php:124
+msgid "Import gallery order"
+msgstr "Importuj sortowanie galerii"
+
+#: ../inc/general/Migration.class.php:125
+msgid ""
+"You have used an old version (<= 2.7.2) of RML and the new version (>= 2.8) "
+"has changed the place where the image gallery order is stored."
+msgstr ""
+"Używasz starszej wersji (<= 2.7.2) RML a w nowych wersjach (>= 2.8) "
+"zmieniono miejsce przechowywania sortowania galerii."
+
+#: ../inc/general/Migration.class.php:199
+msgid "Migration <= 2.6.3"
+msgstr "Migracja <= 2.6.3"
+
+#: ../inc/general/Migration.class.php:208
+msgid "Import image relationships"
+msgstr "Importuj powiązania obrazów"
+
+#: ../inc/general/Migration.class.php:209
+msgid ""
+"You have used an old version (<= 2.6.3) of RML and the new version (>= "
+"2.6.4) has changed the place where the image relationships are stored."
+msgstr ""
+"Używasz starszej wersji (<= 2.6.3) RML a w nowych wersjach (>= 2.8) "
+"zmieniono miejsce przechowywania relacji (powiązań) obrazów."
+
+#: ../inc/general/Exceptions.collection.php:19
+#, php-format
+msgid "'%s' already exists in this folder."
+msgstr "'%s' już istnieje w tym folderu."
+
+#: ../inc/general/View.class.php:39
+msgid "All"
+msgstr "Wszystko"
+
+#: ../inc/general/View.class.php:44 ../inc/general/View.class.php:252
+msgid "Unorganized pictures"
+msgstr "Obrazy nieprzypisane"
+
+#: ../inc/general/Backend.class.php:27
+msgid "<strong>Note: </strong> The files will be uploaded to selected folder."
+msgstr ""
+"<strong>Uwaga: </strong> Pliki zostaną przesłane do zaznaczonego folderu."
+
+#: ../inc/general/Backend.class.php:28
+msgid "Save"
+msgstr "Zapisz"
+
+#: ../inc/general/Backend.class.php:29
+msgid "Close"
+msgstr "Zamknij"
+
+#: ../inc/general/Backend.class.php:30 ../inc/general/Backend.class.php:52
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: ../inc/general/Backend.class.php:31
+msgid "Remove shortcut"
+msgstr "Usuń skrót"
+
+#: ../inc/general/Backend.class.php:32
+msgid "Shortcut"
+msgstr "Skrót"
+
+#: ../inc/general/Backend.class.php:34
+msgid "Done"
+msgstr "Zrobione"
+
+#: ../inc/general/Backend.class.php:35
+msgid "Failed"
+msgstr "Nieudane"
+
+#: ../inc/general/Backend.class.php:36
+msgid "No media files found."
+msgstr "Nie znaleziono mediów."
+
+#: ../inc/general/Backend.class.php:39
+msgid "+ {0} more files to upload..."
+msgstr "+ {0} wiecej plików do przesłania…"
+
+#: ../inc/general/Backend.class.php:40
+msgid ""
+"The search is active, please remove the search term to rearrange your folder "
+"structure."
+msgstr ""
+"Wyszukiwanie w trakcie, proszę usunąć frazę aby zmienić strukturę folderów."
+
+#: ../inc/general/Backend.class.php:41
+msgid ""
+"Move {0} file<br/><span>Hold any key to create a file shortcut.<br /><strong "
+"class=\"rml-move-original-files\">(Moves the shortcut, not original file)</"
+"strong></span>"
+msgstr ""
+"Przenieś {0} plik<br/><span>Przytrzymaj dowolny przycisk aby utworzyć skrót "
+"do pliku.<br /><strong class=\"rml-move-original-files”>(Usuwa skrót, a nie "
+"plik źródłowy)</strong></span>"
+
+#: ../inc/general/Backend.class.php:42
+msgid ""
+"Move {0} files<br/><span>Hold any key to create a file shortcut.<br /"
+"><strong class=\"rml-move-original-files\">(Moves the shortcut, not original "
+"file)</strong></span>"
+msgstr ""
+"Przenieś {0} plików<br/><span>Przytrzymaj dowolny przycisk aby utworzyć "
+"skrót do pliku.<br /><strong class=“rml-move-original-files”>(Usuwa skrót, "
+"nie zaś plik źródłowy)</strong></span>"
+
+#: ../inc/general/Backend.class.php:43
+msgid "Link {0} file<br/><span>Release key to move.</span>"
+msgstr "Połącz {0} plik<br/><span>Zwolnij przycisk aby przenieść.</span>"
+
+#: ../inc/general/Backend.class.php:44
+msgid "Link {0} files<br/><span>Release key to move.</span>"
+msgstr "Połącz {0} plików<br/><span>Zwolnij przycisk aby przenieść.</span>"
+
+#: ../inc/general/Backend.class.php:45
+msgid "A collection can not contain files. Upload moved to Uncategorized..."
+msgstr ""
+"Kolekcja nie może zawierać plików. Przesłane pliki przeniesiono do "
+"Nieskategoryzowanych…"
+
+#: ../inc/general/Backend.class.php:46
+msgid "A gallery can contain only images. Upload moved to Uncategorized..."
+msgstr ""
+"Galeria może zawierać wyłącznie obrazy. Przesłane pliki przeniesiono do "
+"Nieskategoryzowanych…"
+
+#: ../inc/general/Backend.class.php:47
+msgid "In this folder are sub directories, please delete them first!"
+msgstr "W tym folderze są podfoldery, usuń je w pierwszej kolejności!"
+
+#: ../inc/general/Backend.class.php:48
+msgid "Do not delete root. :("
+msgstr "Nie usuwaj katalogu głównego. :("
+
+#: ../inc/general/Backend.class.php:49
+msgid ""
+"Would you like to delete the folder \"{0}\"? Note: All files in this folder "
+"will be moved to the unorganized folder."
+msgstr ""
+"Chcesz usunąć folder “{0}”? Uwaga: Wszystkie pliki z tego folderu zostaną "
+"przeniesione do Nieskategoryzowanych."
+
+#: ../inc/general/Backend.class.php:50 ../inc/general/Backend.class.php:63
+msgid "Are you sure?"
+msgstr "Jesteś pewien?"
+
+#: ../inc/general/Backend.class.php:51
+msgid "Yes, delete it!"
+msgstr "Tak, usuń!"
+
+#: ../inc/general/Backend.class.php:53
+msgid "Sort files"
+msgstr "Sortuj pliki"
+
+#: ../inc/general/Backend.class.php:54
+msgid ""
+"You want to order the files in this folder. If you confirm, you can "
+"<strong>drag&drop</strong> the files. If you want to reset the order, select "
+"the folder again and go to folder details (see image above)."
+msgstr ""
+"Chcesz przesortować pliki w tym folderze. Jeśli zatwierdzisz, możesz "
+"<strong>przeciągać i upuszczać</strong> pliki. Jeśli chcesz zresetować "
+"sortowanie, zaznacz folder ponownie i przejdź do jego szczegółów (zobacz "
+"obrazek powyżej)."
+
+#: ../inc/general/Backend.class.php:55
+msgid "Move it!"
+msgstr "Przenieś go!"
+
+#: ../inc/general/Backend.class.php:56
+msgid ""
+"You want to move one or more files from different folder sources because you "
+"are in the \"All Files\" view."
+msgstr ""
+"Chcesz przenieść jeden lub więcej plików z różnych folderów źródłowych "
+"ponieważ jesteś w widoku “Wszystkie pliki”."
+
+#: ../inc/general/Backend.class.php:57
+msgid "Do not rename root. :("
+msgstr "Nie zmieniaj nazwy folderu root :("
+
+#: ../inc/general/Backend.class.php:58
+msgid "Tell me the new name"
+msgstr "Podaj nową nazwę"
+
+#: ../inc/general/Backend.class.php:59
+msgid "Rename folder"
+msgstr "Zmień nazwę folderu"
+
+#: ../inc/general/Backend.class.php:60
+msgid ""
+"In the current view of uploads are filters active. Please reset these and "
+"refresh the view."
+msgstr ""
+"W bieżącym widoku przesłanych plików są aktywne filtry. Zresetuj je i "
+"odśwież widok."
+
+#: ../inc/general/Backend.class.php:61
+msgid ""
+"Please go to your media library \"Media > Library\" to open the details "
+"window for the selected folder."
+msgstr ""
+"Przejdź do biblioteki mediów “Media > Biblioteka” by otworzyć okno "
+"szczegółów zaznaczonego folderu."
+
+#: ../inc/general/Backend.class.php:62
+msgid "A folder details window is already opened."
+msgstr "Okno szczegółów folderu jest już otwarte."
+
+#: ../inc/general/Backend.class.php:66
+msgid "Set cover image"
+msgstr "Ustaw okładkę"
+
+#: ../inc/general/Backend.class.php:67
+msgid "Select another cover image"
+msgstr "Wybierz inny obraz okładki"
+
+#: ../inc/general/Backend.class.php:68
+msgid "No cover image"
+msgstr "Brak okładki"
+
+#: ../inc/general/Backend.class.php:69
+msgid "Select cover image"
+msgstr "Wybierz obraz okładki"
+
+#: ../inc/general/Backend.class.php:70
+msgid "Set as cover image"
+msgstr "Ustaw jako obraz okładki"
+
+#: ../inc/general/Backend.class.php:76
+msgid "Click this to create a <strong>new folder</strong>"
+msgstr "Kliknij tu aby utworzyć <strong>nowy folder</strong>"
+
+#: ../inc/general/Backend.class.php:77
+msgid ""
+"A folder can contain every type of file and collections, but no galleries. "
+"If you want to create a subfolder simply select a folder from the list and "
+"click this button."
+msgstr ""
+"Folder może zawierać dowolny rodzaj plików i kolekcji, ale nie galerie. "
+"Jeśli chcesz utworzyć podfolder, zaznacz folder na poniższej liście i "
+"kliknij ten przycisk."
+
+#: ../inc/general/Backend.class.php:80
+msgid "Click this to create a <strong>new collection</strong>"
+msgstr "Kliknij tu aby utworzyć <strong>nową kolekcję</strong>"
+
+#: ../inc/general/Backend.class.php:81
+msgid ""
+"A collection can contain no files. But you can create there other "
+"collections and <strong>galleries</strong>. The mentioned above gallery is "
+"only a <i>gallery data folder</i>, that means they are not automatically in "
+"your frontend (your website).<br/><br/>You can create a <strong>visual "
+"gallery</strong> from this <i>gallery data folder</i> via the Visual Editor "
+"in your page/post."
+msgstr ""
+"Kolekcja nie może zawierać plików. Możesz jednak utworzyć w nich inne "
+"kolekcje oraz <strong>galerie</strong>. Wspomniana galeria jest jedynie "
+"<i>folderem danych galerii</i>, co znaczy, że nie są dostępne z frontendu "
+"(Twojej strony).<br/><br/>Możesz utworzyć <strong>galerię wizualną</strong> "
+"z tego <i>folderu danych galerii</i> poprzez Edytor wizualny strony lub "
+"postu."
+
+#: ../inc/general/Backend.class.php:84
+msgid "Click this to create a <strong>new gallery data folder</strong>"
+msgstr "Kliknij tu aby utworzyć <strong>nowy folder galeria</strong>"
+
+#: ../inc/general/Backend.class.php:85
+msgid ""
+"A <i>gallery data folder</i> can only contain images. It is simplier for you "
+"to distinguish where your visual galleries are.<br/><br/>You can also order "
+"the images into <strong>a custom image order</strong> per drag&drop."
+msgstr ""
+"Folder galeria</i> może zawierać wyłącznie obrazy. Ułatwia odróżnianie "
+"galerii wizualnych.<br/><br/>Możesz tu stosować <strong>własne sortowanie</"
+"strong> metodą przeciągnij-upuść."
+
+#: ../inc/general/Backend.class.php:90
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: ../inc/general/Backend.class.php:91
+msgid "General settings for the current logged in user."
+msgstr "Ustawienia główne dla zalogowanych użytkowników."
+
+#: ../inc/general/Backend.class.php:94
+msgid "Reorder files in this folder"
+msgstr "Przesortuj pliki w tym folderze"
+
+#: ../inc/general/Backend.class.php:95
+msgid ""
+"Start to reorder the files / images in the current folder. The order of a "
+"folder can be reset in the media options.<br />Go to the folder details to "
+"order a folder by <strong>title, filename, ID, ...</strong>"
+msgstr ""
+"Rozpocznij przesortowanie plików / obrazów w bieżącym folderze. Sortowanie "
+"folderu może być zresetowane w opcjach mediów.<br />Przejdź do szczegółów "
+"folderu aby sortować folder po <strong>title, filename, ID, ...</strong>"
+
+#: ../inc/general/Backend.class.php:96
+msgid ""
+"The selected folder <strong>does not allow</strong> to reorder the files / "
+"images."
+msgstr ""
+"Zaznaczony folder <strong>nie zezwala</strong> na przesortowanie plików / "
+"obrazów."
+
+#: ../inc/general/Backend.class.php:99
+msgid "Refresh"
+msgstr "Odśwież"
+
+#: ../inc/general/Backend.class.php:100
+msgid "Refreshes the current folder view."
+msgstr "Odświeża bieżący widok folderów."
+
+#: ../inc/general/Backend.class.php:103
+msgid "Rename"
+msgstr "Zmień nazwę"
+
+#: ../inc/general/Backend.class.php:104
+msgid "Rename the current selected folder."
+msgstr "Usuń aktualnie zaznaczony folder."
+
+#: ../inc/general/Backend.class.php:105
+msgid ""
+"The selected folder can not be renamed. Please select a user-created folder."
+msgstr ""
+"Nie można zmienić nazwy tego folderu. Wybierz folder utworzony przez "
+"użytkownika."
+
+#: ../inc/general/Backend.class.php:108
+msgid "Delete"
+msgstr "Usuń"
+
+#: ../inc/general/Backend.class.php:109
+msgid "Delete the current selected folder."
+msgstr "Usuń aktualnie wybrany folder."
+
+#: ../inc/general/Backend.class.php:110
+msgid ""
+"The selected folder can not be deleted. Please select a user-created folder."
+msgstr ""
+"Nie można usunąć tego folderu. Wybierz folder utworzony przez użytkownika."
+
+#: ../inc/general/Backend.class.php:113
+msgid "Rearrange"
+msgstr "Zmień kolejność"
+
+#: ../inc/general/Backend.class.php:114
+msgid "Change the hierarchical order of the folders."
+msgstr "Zmień hierarchiczną kolejność folderów."
+
+#: ../inc/general/Backend.class.php:117
+msgid "Folder details"
+msgstr "Szczegóły folderu"
+
+#: ../inc/general/Backend.class.php:118
+msgid "Select a folder and view more details about it."
+msgstr "Zaznacz folder i zobacz więcej szczegółów o nim."
+
+#: ../inc/general/Backend.class.php:119
+msgid "Please select a folder to make this button enabled."
+msgstr "Zaznacz folder, aby przycisk był aktywny."
+
+#: ../inc/general/Backend.class.php:121
+msgid "New folders inherit this restriction"
+msgstr "Nowe foldery dziedziczą to ograniczenie"
+
+#: ../inc/general/Backend.class.php:122
+msgid "The current selected folder has some restrictions:"
+msgstr "Zaznaczony folder ma pewne ograniczenia:"
+
+#: ../inc/general/Backend.class.php:124
+msgid "You can not change <b>parent</b> folder"
+msgstr "Nie można zmienić <b>folderu nadrzędnego</b>"
+
+#: ../inc/general/Backend.class.php:125
+msgid "You can not <b>rearrange</b> subfolders"
+msgstr "Nie można <b>zmienić kolejności</b> podfolderów"
+
+#: ../inc/general/Backend.class.php:126
+msgid "You can not <b>create</b> subfolders"
+msgstr "Nie można <b>utworzyć</b> podfolderów"
+
+#: ../inc/general/Backend.class.php:127
+msgid ""
+"You can not <b>insert</b> new files. New files will be moved to "
+"Uncategorized..."
+msgstr ""
+"Nie można <b> wstawić</b> nowych plików. Nowe pliki zostaną przeniesione do "
+"Nieskategoryzowanych…"
+
+#: ../inc/general/Backend.class.php:128
+msgid "You can not <b>rename</b> the folder"
+msgstr "Nie można <b>zmienić nazwy</b> folderu"
+
+#: ../inc/general/Backend.class.php:129
+msgid "You can not <b>delete</b> the folder"
+msgstr "Nie można <b>usunąć</b> folderu"
+
+#: ../inc/general/Backend.class.php:130
+msgid "You can not <b>move</b> files outside the folder"
+msgstr "Nie można <b>przenieść</b> plików poza folder"
+
+#: ../inc/general/Backend.class.php:133
+msgid "Gallery from Media Folder"
+msgstr "Galeria z folderu Media"
+
+#: ../inc/general/Backend.class.php:134
+msgid ""
+"Note: You can only select galleries. Folders and collections are grayed."
+msgstr ""
+"Uwaga: możesz zaznaczyć tylko galerie. Foldery i kolekcje są wyszarzone."
+
+#: ../inc/general/Backend.class.php:136
+msgid "Link to"
+msgstr "Link do"
+
+#: ../inc/general/Backend.class.php:137
+msgid "Columns"
+msgstr "Kolumny"
+
+#: ../inc/general/Backend.class.php:138
+msgid "Random Order"
+msgstr "Kolejność losowa"
+
+#: ../inc/general/Backend.class.php:139
+msgid "Size"
+msgstr "Rozmiar"
+
+#: ../inc/general/Backend.class.php:141
+msgid "Attachment File"
+msgstr "Plik załącznika"
+
+#: ../inc/general/Backend.class.php:142
+msgid "Media File"
+msgstr "Plik multimedialny"
+
+#: ../inc/general/Backend.class.php:143
+msgid "None"
+msgstr "Brak"
+
+#: ../inc/general/Backend.class.php:146
+msgid "Thumbnail"
+msgstr "Miniaturka"
+
+#: ../inc/general/Backend.class.php:147
+msgid "Medium"
+msgstr "Średni"
+
+#: ../inc/general/Backend.class.php:148
+msgid "Large"
+msgstr "Duży"
+
+#: ../inc/general/Backend.class.php:149
+msgid "Full Size"
+msgstr "Pełny rozmiar"
+
+#: ../inc/general/Backend.class.php:165
+msgid ""
+"\n"
+"\n"
+"Note: If you want to delete a shortcut file, the source file will NOT bet "
+"deleted.\n"
+"If you want to delete a non-shortcut file, all associated shortcuts are "
+"deleted, too."
+msgstr ""
+"\n"
+"\n"
+"Uwaga: Jeśli chcesz usunąć plik skrótu, plik źródłowy NIE zostanie "
+"usunięty.\n"
+"Jeśli chcesz usunąć plik bez skrótu, usuwane są także wszystkie powiązane "
+"skróty."
+
+#: ../inc/general/Backend.class.php:198
+msgid "Browse Add-Ons"
+msgstr "Przeglądaj dodatki"
+
+#. Name of the plugin
+msgid "WP Real Media Library"
+msgstr "WP Real Media Library"
+
+#. URI of the plugin
+msgid "https://matthias-web.com/wordpress/real-media-library"
+msgstr "https://matthias-web.com/wordpress/real-media-library"
+
+#. Description of the plugin
+msgid "Organize your wordpress media library in a nice way."
+msgstr "Zorganizuj swoją bibliotekę mediów w prosty sposób."
+
+#. Author of the plugin
+msgid "Matthias Günter"
+msgstr "Matthias Günter"
+
+#. URI of the plugin
+msgid "https://matthias-web.com"
+msgstr "https://matthias-web.com"
