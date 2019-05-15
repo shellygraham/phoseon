@@ -94,7 +94,7 @@ get_header(); ?>
 			) );
 			while ( $the_query->have_posts() ) :
 			    $the_query->the_post(); ?>
-			    	<?php get_template_part( 'template-parts/content-featured-news', get_post_format() );
+			    	<?php get_template_part( 'template-parts/content-featured-news-itn', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 

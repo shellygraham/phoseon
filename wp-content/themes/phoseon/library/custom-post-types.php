@@ -83,6 +83,54 @@
 	}
 	add_action( 'init', 'create_post_type' );
 
+// Case Studies CPT
+
+		register_post_type( 'case_studies',
+			array(
+				'labels' => array(
+					'name' => __( 'Case Studies' ),
+					'singular_name' => __( 'Case Study' )
+				),
+				'public' => true,
+				'show_in_rest' => true,
+				'has_archive' => true,
+				'rewrite' => array('slug' => 'case-studies'),
+				'supports' => array( 'title', 'editor', 'comments', 'thumbnail', 'excerpt', 'revisions' ),
+			)
+		);
+
+// Partners CPT
+
+		register_post_type( 'partners',
+			array(
+				'labels' => array(
+					'name' => __( 'Partners' ),
+					'singular_name' => __( 'Partner' )
+				),
+				'public' => true,
+				'show_in_rest' => true,
+				'has_archive' => false,
+				'rewrite' => array('slug' => 'partners'),
+				'supports' => array( 'title', 'editor', 'comments', 'thumbnail', 'excerpt', 'revisions' ),
+			)
+		);
+
+// Distributors CPT
+
+		register_post_type( 'distributors',
+			array(
+				'labels' => array(
+					'name' => __( 'Distributors' ),
+					'singular_name' => __( 'Distributor' )
+				),
+				'public' => true,
+				'show_in_rest' => true,
+				'has_archive' => false,
+				'rewrite' => array('slug' => 'distributors'),
+				'supports' => array( 'title', 'thumbnail', 'revisions' ),
+			)
+		);
+
 // NEWS Cats
 	
 
@@ -414,3 +462,43 @@
 	    );  
 	}  
 	add_action( 'init', 'featured_taxonomy', 0 );
+
+// Case Study Categories
+	
+	function case_study_taxonomy() {  
+	    register_taxonomy(  
+	        'case_study_cat',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'case_studies' ),       //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Case Study Type',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'case_study_cat', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'case_study_taxonomy', 0 );
+
+// Distributor Regions
+	
+	function distributor_region_taxonomy() {  
+	    register_taxonomy(  
+	        'distributor_regions',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+	        array( 'distributors' ),       //post type name
+	        array(  
+	            'hierarchical' => true,  
+	            'label' => 'Distributor Region',  //Display name
+	            'query_var' => true,
+	            'rewrite' => array(
+	                'slug' => 'distributor_region', // This controls the base slug that will display before each term
+	                'with_front' => false // Don't display the category base before 
+	            ),
+	            'show_in_rest' => true,
+	        )  
+	    );  
+	}  
+	add_action( 'init', 'distributor_region_taxonomy', 0 );

@@ -5,7 +5,7 @@ Template Name: Products by Cooling Method
 
 get_header(); ?>
 
-<div class="product-wrapper">
+<div class="product-wrapper cooling">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12">
@@ -17,8 +17,8 @@ get_header(); ?>
 	</div>
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-6 variation bucket">
-				<h4><?php the_field('air_cooled_header'); ?></h4>
+			<div class="cell small-6 bucket">
+				<h3><span class="air"></span><?php the_field('air_cooled_header'); ?></h3>
 				<?php if( have_rows('air_cooled_products') ):
 				    while ( have_rows('air_cooled_products') ) : the_row(); ?>								
 						<?php
@@ -30,7 +30,7 @@ get_header(); ?>
 			        			<div class="cell small-3">
 				        			<a href="<?php the_permalink(); ?>">
 										<?php the_post_thumbnail(); ?>
-										<h4><?php echo get_the_title(); ?></h4>
+										<h5><?php echo get_the_title(); ?></h5>
 						        	</a>
 						        </div>
 							    <?php endforeach; ?>
@@ -41,8 +41,8 @@ get_header(); ?>
 				<?php endif; ?>
 				<?php the_field('air_cooled_products_content'); ?>
 			</div>
-			<div class="cell small-6 variation bucket">
-				<h4><?php the_field('water_cooled_header'); ?></h4>
+			<div class="cell small-6 bucket">
+				<h3><span class="water"></span><?php the_field('water_cooled_header'); ?></h3>
 				<?php if( have_rows('water_cooled_products') ):
 				    while ( have_rows('water_cooled_products') ) : the_row(); ?>								
 						<?php
@@ -54,7 +54,7 @@ get_header(); ?>
 			        			<div class="variation cell small-3 bucket">
 				        			<a href="<?php the_permalink(); ?>">
 										<?php the_post_thumbnail(); ?>
-										<h4><?php echo get_the_title(); ?></h4>
+										<h5><?php echo get_the_title(); ?></h5>
 						        	</a>
 						        </div>
 							    <?php endforeach; ?>

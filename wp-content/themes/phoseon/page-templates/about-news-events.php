@@ -63,7 +63,7 @@ get_header(); ?>
 			    	get_template_part( 'template-parts/content-news', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-			<a href="/blog/press-releases" class="button">See more Phoseon press releases »</a>
+			<a href="/press-releases" class="button"><?php the_field('phoseon_pr_button','option'); ?></a>
 		</div>
 		<div class="cell small-4">
 			<h2>In the News</h2>
@@ -86,7 +86,7 @@ get_header(); ?>
 			) );
 			while ( $the_query->have_posts() ) :
 			    $the_query->the_post(); ?>
-			    	<?php get_template_part( 'template-parts/content-featured-news', get_post_format() );
+			    	<?php get_template_part( 'template-parts/content-featured-news-itn', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 						
@@ -108,7 +108,7 @@ get_header(); ?>
 			    	get_template_part( 'template-parts/content-news', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-			<a href="/blog/in-the-news" class="button">See more Phoseon news »</a>
+			<a href="/in-the-news" class="button"><?php the_field('phoseon_news_button','options'); ?></a>
 		</div>
 		<div class="cell small-4">
 			<h2>Events</h2>
@@ -153,7 +153,7 @@ get_header(); ?>
 			    	get_template_part( 'template-parts/content-events', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-				<a href="/blog/events" class="button">See more Phoseon events »</a>
+				<a href="/events" class="button"><?php the_field('phoseon_events_button','option'); ?></a>
 		</div>
 	</div>
 </div>

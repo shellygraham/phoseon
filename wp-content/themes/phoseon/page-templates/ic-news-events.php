@@ -6,16 +6,12 @@ get_header(); ?>
 
 <div class="grid-container news-main">
 	<div class="grid-x grid-margin-x">
-		<div class="cell small-6">
+		<div class="cell small-12">
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-					<h1><?php the_title(); ?></h1>
 					<?php the_content(); ?>
 				<?php endwhile; ?>
 			<?php endif; ?>
-		</div>
-		<div class="cell small-6">
-			<?php the_post_thumbnail('fp-small'); ?>
 		</div>
 	</div>
 	<div class="grid-x grid-margin-x">
@@ -94,7 +90,7 @@ get_header(); ?>
 			) );
 			while ( $the_query->have_posts() ) :
 			    $the_query->the_post(); ?>
-			    	<?php get_template_part( 'template-parts/content-featured-news', get_post_format() );
+			    	<?php get_template_part( 'template-parts/content-featured-news-itn', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 
@@ -121,7 +117,7 @@ get_header(); ?>
 			    	get_template_part( 'template-parts/content-news', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-			<a href="/life-sciences/resources/ic-news-events/industrial-curing-in-the-news/" class="button">See more Phoseon news »</a>
+			<a href="/life-sciences/resources/ic-news-events/industrial-curing-in-the-news/" class="button"><?php the_field('phoseon_news_button','options'); ?></a>
 		</div>
 		<div class="cell small-4">
 			<h2>Events</h2>

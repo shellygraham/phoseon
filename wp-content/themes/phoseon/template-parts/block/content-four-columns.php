@@ -84,6 +84,7 @@
 					<?php endif; ?>
 			    <?php endif; ?>
 			</div>
+			<?php if( get_field('four_columns_text_4') ): ?>
 			<div class="cell medium-6 large-3 bucket">
 				<a class="column-img" href="<?php the_field('four_columns_button_link_4'); ?>">
 			    <?php
@@ -109,6 +110,7 @@
 					<?php endif; ?>
 			    <?php endif; ?>
 			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

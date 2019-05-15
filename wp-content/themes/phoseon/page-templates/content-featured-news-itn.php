@@ -14,7 +14,7 @@
 	<div class="grid-x grid-margin-x">
 		<div class="cell small-12 featured-post">
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
-				<h2 class="entry-title"><?php echo the_field('featured_post_title'); ?></h2>
+				<h2 class="entry-title"><?php echo the_field('featured_post_title-itn'); ?></h2>
 				<span>Read more »</span>
 			</a>
 		</div>

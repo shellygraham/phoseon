@@ -164,14 +164,34 @@ header {
 				z-index: 100;
 			}
 		}
-		.utility-blog {
+		#utility-blog {
 			float: left;
 			background: #dededd;
 			font-family: $font-bold;
 			color: $blue;
 			font-size: 14px;
-			padding: 4px 18px 3px 18px;
 			margin-right: 10px;
+			width: 136px;
+			.nested.is-accordion-submenu {
+				position: absolute;
+				background-color: rgba(0, 110, 185, 0.9);
+				border: 0;
+			}
+			.is-accordion-submenu-parent {
+				a {
+					padding-top: 6px;
+					&::after {
+						top: 14px;
+						right: 14px;
+					}
+				}
+			}
+			.is-accordion-submenu a {
+			    color: #fff !important;
+			    padding: 0.5rem !important;
+			    border-bottom: 1px solid #fff;
+			    margin-right: 0 !important;
+			}
 		}
 		.top-bar-left {
 			float: right;
@@ -182,7 +202,7 @@ header {
 			font-family: $font-bold;
 			color: $purple;
 			font-size: 14px;
-			padding: 4px 18px 3px 18px;
+			padding: 4px 18px 3px 0;
 			margin-right: 10px;
 		}
 		#searchform {
@@ -313,7 +333,7 @@ header {
 	padding-top: 30px;
 	.banner-hero {
 		position: relative;
-		margin-bottom: 60px;
+		margin-bottom: 30px;
 		.banner-hero-container {
 			position: absolute;
 			top: 0;
@@ -351,7 +371,7 @@ header {
 }
 .four-columns, .three-columns {
 	padding-top: 15px;
-	padding-bottom: 60px;
+	padding-bottom: 30px;
 }
 .bucket {
 	padding: 10px 10px 34px 10px;
@@ -766,19 +786,29 @@ footer {
     border-color: #006eb9 transparent transparent;
 }
 .accordion-item {
+	margin-bottom: 10px;
 	.accordion-title {
+/*
 		font-size: 24px;
 		font-family: $font-bold;
+*/
+    background: #f2f2f2;
+    border: 0;
+    border-bottom: 0 !important;
+    color: #0a0a0a;
+    font-size: 16px;
+    font-family: "trebuchet_msregular";
+    padding: 10px 15px;
+    line-height: 1.5;
 		span {
 			display: inline-block;
-		    width: 0;
-		    height: 0;
-		    border: inset 12px;
-		    border-bottom-width: 0;
-		    border-top-style: solid;
-		    border-color: #006eb9 transparent transparent;
-			margin-left: 14px;
-			padding-bottom: 2px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 9.5px 5.5px 0 5.5px;
+			border-color: #0a0a0a transparent transparent transparent;
+			margin-right: 10px;
+			transform: rotate(31deg);
 		}
 		&:before {
 			display: none;
@@ -787,13 +817,13 @@ footer {
 	&.is-active {
 		.accordion-title {
 			span {
-				border-color: transparent transparent #006eb9 transparent;
-				border-style: solid;
-				border-top-width: 0;
-				border-bottom-width: 12px;
+				transform: none;
 			}
 		}
 	}
+}
+.accordion-content {
+	border: 0;
 }
 .pr-feed {
 	margin-top: 40px;
@@ -896,5 +926,77 @@ footer {
 				}
 			}
 		}	
+	}
+}
+.news-banner {
+	h2 {
+		color: #fff;
+	}
+	.entry-title {
+		font-size: 18px;
+		line-height: normal;
+		a {
+			color: #fff;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.cooling {
+	.bucket {
+		h3 {
+			position: relative;
+			display: inline-block;
+			.air {
+				background: url('../images/air.jpg') no-repeat;
+				background-size: cover;
+				width: 33px;
+				height: 33px;
+				display: inline-block;
+				position: absolute;
+				left: -38px;
+			}
+			.water {
+				background: url('../images/water.jpg') no-repeat;
+				background-size: cover;
+				width: 33px;
+				height: 33px;
+				display: inline-block;
+				position: absolute;
+				left: -38px;		
+			}		
+		}
+	}
+	.variation {
+		li {
+			display: block;
+		}
+		&.bucket {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			h5 {
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+.search {
+	h1 {
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+	article {
+		margin-bottom: 40px;
+		h2 {
+			margin-bottom: 10px;
+			a {
+				text-decoration: none;
+			}
+		}
+		h5 {
+			padding: 0;
+		}
 	}
 }

@@ -8,14 +8,16 @@
 
 get_header(); ?>
 
-<div class="grid-container">
+<div class="grid-container default">
 	<div class="grid-x grid-margin-x">
 		<div class="cell small-12">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'template-parts/content-pr', '' ); ?>
-<!-- 			<?php the_post_navigation(); ?> -->
+			<?php the_content(); ?>
+			<a href="<?php the_field('pdf_link'); ?>" class="button">Download PDF</a>
 		<?php endwhile; ?>
 		</div>
 	</div>
 </div>
-<?php get_footer();
+
+<?php
+get_footer();

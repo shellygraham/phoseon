@@ -23,7 +23,7 @@ get_header(); ?>
 						<?php $counter = 0; ?>
 						<?php while ( have_rows('emitting_window_length_sorter') ) : the_row(); ?>
 	    				<li <?php echo (++$counter); ?> class="accordion-item<?php if($counter==1) { echo ' is-active'; } ?>" data-accordion-item>
-							<a href="#" class="accordion-title"><?php the_sub_field('emitting_window_length_header'); ?><span></span></a>
+							<a href="#" class="accordion-title"><span></span><?php the_sub_field('emitting_window_length_header'); ?></a>
 							<?php if( have_rows('product_types') ): ?>
 							<div class="accordion-content" data-tab-content>
 								<div class="grid-x grid-margin-x">

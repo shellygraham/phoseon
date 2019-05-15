@@ -1,20 +1,14 @@
 <?php
 /**
- * The template for displaying search results pages.
- *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * The template for Search page
  */
 
 get_header(); ?>
 
-<div class="main-container">
-	<div class="main-grid">
-		<main id="search-results" class="main-content">
-
-		<header>
+<div class="grid-container default">
+	<div class="grid-x grid-margin-x">
+		<div class="cell small-12">
 			<h1 class="entry-title"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h1>
-		</header>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -37,10 +31,7 @@ get_header(); ?>
 				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
 			</nav>
 		<?php endif; ?>
-
-		</main>
-	<?php get_sidebar(); ?>
-
+		</div>
 	</div>
 </div>
 <?php get_footer();

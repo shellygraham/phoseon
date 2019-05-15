@@ -188,6 +188,17 @@ function my_acf_init() {
 			'keywords'			=> array( 'two-column-events-feed', 'layout' ),
 		));
 
+		// register a news banner block
+		acf_register_block(array(
+			'name'				=> 'news-banner',
+			'title'				=> __('News Banner'),
+			'description'		=> __('Banner with 4 PR posts.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'news-banner', 'layout' ),
+		));
+
 	}
 }
 

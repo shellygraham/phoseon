@@ -10,12 +10,19 @@
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell large-4 bucket">
-				<a href="<?php the_field('three_columns_button_link'); ?>">
+				<?php 
+				$link1 = get_field('three_columns_button_link_1');
+				
+					$link_url1 = $link1['url'];
+					$link_title1 = $link1['title'];
+					$link_target1 = $link1['target'] ? $link1['target'] : '_self';
+				?>
+				<a href="<?php echo esc_url($link_url1); ?>">
 			    <?php
-				$image = get_field('three_columns_image');
-				$size = 'featured-three'; // (thumbnail, medium, large, full or custom size)
-				if( $image ) {
-					echo wp_get_attachment_image( $image, $size );
+				$image1 = get_field('three_columns_image');
+				$size1 = 'featured-three'; // (thumbnail, medium, large, full or custom size)
+				if( $image1 ) {
+					echo wp_get_attachment_image( $image1, $size1 );
 				}
 				?>
 				</a>
@@ -25,22 +32,29 @@
 			    <?php if( get_field('three_columns_text') ): ?>
 			    <p><?php the_field('three_columns_text'); ?></p>
 			    <?php endif; ?>
-			    <?php if( get_field('three_columns_button_link') ): ?>
-			    	<?php if( get_field('button_link_style_1') == 'button' ): ?>
-						<a href="<?php the_field('three_columns_button_link'); ?>" class="button"><?php the_field('three_columns_button_text'); ?></a>
-					<?php endif; ?>
-					<?php if( get_field('button_link_style_1') == 'link' ): ?>
-						<a href="<?php the_field('three_columns_button_link'); ?>"><?php the_field('three_columns_button_text'); ?></a>
-					<?php endif; ?>
-			    <?php endif; ?>
+
+		    	<?php if( get_field('three_columns_button_text') ): ?>
+					<a class="button" href="<?php echo esc_url($link_url1); ?>" target="<?php echo esc_attr($link_target1); ?>"><?php the_field('three_columns_button_text'); ?></a>
+				<?php endif; ?>
 			</div>
+			
+			
+			
+			
 			<div class="cell large-4 bucket">
-				<a href="<?php the_field('three_columns_button_link_2'); ?>">
+				<?php 
+				$link2 = get_field('three_columns_button_link_2');
+				
+					$link_url2 = $link2['url'];
+					$link_title2 = $link2['title'];
+					$link_target2 = $link2['target'] ? $link2['target'] : '_self';
+				?>
+				<a href="<?php echo esc_url($link_url2); ?>">
 			    <?php
-				$image = get_field('three_columns_image_2');
-				$size = 'featured-three'; // (thumbnail, medium, large, full or custom size)
-				if( $image ) {
-					echo wp_get_attachment_image( $image, $size );
+				$image2 = get_field('three_columns_image_2');
+				$size2 = 'featured-three'; // (thumbnail, medium, large, full or custom size)
+				if( $image2 ) {
+					echo wp_get_attachment_image( $image2, $size2 );
 				}
 				?>
 				</a>
@@ -50,22 +64,29 @@
 			    <?php if( get_field('three_columns_text_2') ): ?>
 			    <p><?php the_field('three_columns_text_2'); ?></p>
 			    <?php endif; ?>
-			    <?php if( get_field('three_columns_button_link_2') ): ?>
-			    	<?php if( get_field('button_link_style_1') == 'button' ): ?>
-						<a href="<?php the_field('three_columns_button_link_2'); ?>" class="button"><?php the_field('three_columns_button_text_2'); ?></a>
-					<?php endif; ?>
-					<?php if( get_field('button_link_style_1') == 'link' ): ?>
-						<a href="<?php the_field('three_columns_button_link_2'); ?>"><?php the_field('three_columns_button_text_2'); ?></a>
-					<?php endif; ?>
-			    <?php endif; ?>
+		    	<?php if( get_field('three_columns_button_text_2') ): ?>
+					<a class="button" href="<?php echo esc_url($link_url2); ?>" target="<?php echo esc_attr($link_target2); ?>"><?php the_field('three_columns_button_text_2'); ?></a>
+				<?php endif; ?>
 			</div>
+			
+			
+			
+			
+			<?php if( get_field('three_columns_text_3') ): ?>
 			<div class="cell large-4 bucket">
-				<a href="<?php the_field('three_columns_button_link_3'); ?>">
+				<?php 
+				$link3 = get_field('three_columns_button_link_3');
+				
+					$link_url3 = $link3['url'];
+					$link_title3 = $link3['title'];
+					$link_target3 = $link3['target'] ? $link3['target'] : '_self';
+				?>
+				<a href="<?php echo esc_url($link_url3); ?>">
 			    <?php
-				$image = get_field('three_columns_image_3');
-				$size = 'featured-three'; // (thumbnail, medium, large, full or custom size)
-				if( $image ) {
-					echo wp_get_attachment_image( $image, $size );
+				$image3 = get_field('three_columns_image_3');
+				$size3 = 'featured-three'; // (thumbnail, medium, large, full or custom size)
+				if( $image3 ) {
+					echo wp_get_attachment_image( $image3, $size3 );
 				}
 				?>
 				</a>
@@ -75,15 +96,11 @@
 			    <?php if( get_field('three_columns_text_3') ): ?>
 			    <p><?php the_field('three_columns_text_3'); ?></p>
 			    <?php endif; ?>
-			    <?php if( get_field('three_columns_button_link_3') ): ?>
-			    	<?php if( get_field('button_link_style_1') == 'button' ): ?>
-						<a href="<?php the_field('three_columns_button_link_3'); ?>" class="button"><?php the_field('three_columns_button_text_3'); ?></a>
-					<?php endif; ?>
-					<?php if( get_field('button_link_style_1') == 'link' ): ?>
-						<a href="<?php the_field('three_columns_button_link_3'); ?>"><?php the_field('three_columns_button_text_3'); ?></a>
-					<?php endif; ?>
-			    <?php endif; ?>
+		    	<?php if( get_field('three_columns_button_text_3') ): ?>
+					<a class="button" href="<?php echo esc_url($link_url3); ?>" target="<?php echo esc_attr($link_target3); ?>"><?php the_field('three_columns_button_text_3'); ?></a>
+				<?php endif; ?>
 			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

@@ -64,24 +64,23 @@
 			<!-- All non-featured posts -->			
 			<?php $the_query = new WP_Query( array(
 			    'post_type' => 'events',
+			    'posts_per_page' => '3',
 			) );
 			while ( $the_query->have_posts() ) :
 			    $the_query->the_post(); 
-
-			    
-			    
 			    ?>
 			    <?php $postid = get_the_ID(); ?>
-<article id="post-<?php echo $postID; ?>" <?php post_class(); ?>>
-	<div class="grid-x grid-margin-x">
-		<div class="cell small-12 event-posts">
-			<h2><?php the_title(); ?></h2>
-			<p><?php the_field('start_date', $postid); ?> - <?php the_field('end_date', $postid); ?><br>
-			<?php the_field('event_location', $postid); ?></p>
-			<a href="<?php the_field('event_website', $postid); ?>" target="_blank">Show website »</a>
-		</div>
-	</div>
-</article>			<?php endwhile; ?>
+				<article id="post-<?php echo $postID; ?>" <?php post_class(); ?>>
+					<div class="grid-x grid-margin-x">
+						<div class="cell small-12 event-posts">
+							<h2><?php the_title(); ?></h2>
+							<p><?php the_field('start_date', $postid); ?> - <?php the_field('end_date', $postid); ?><br>
+							<?php the_field('event_location', $postid); ?></p>
+							<a href="<?php the_field('event_website', $postid); ?>" target="_blank">Show website »</a>
+						</div>
+					</div>
+				</article>	
+			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 
 			</div>

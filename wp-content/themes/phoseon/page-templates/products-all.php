@@ -22,7 +22,7 @@ get_header(); ?>
 				<?php echo do_shortcode('[ajax_load_more_filters id="product_filters" target="my_alm_filters" container_type="div"]'); ?>
 			</div>
 			<div class="cell small-12">
-				<?php echo do_shortcode('[ajax_load_more id="my_alm_filters" transition_container_classes="grid-x grid-margin-x" filters="true" target="product_filters" post_type="products" posts_per_page="12" button_label="More Products"]'); ?>
+				<?php echo do_shortcode('[ajax_load_more id="my_alm_filters" transition_container_classes="grid-x grid-margin-x" filters="true" target="product_filters" post_type="products" repeater="template_3" order="ASC" orderby="title" posts_per_page="12" button_label="More Products"]'); ?>
 			</div>
 		</div>
 	</div>
