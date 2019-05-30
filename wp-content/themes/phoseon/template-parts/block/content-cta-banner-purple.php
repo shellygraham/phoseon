@@ -15,8 +15,14 @@
 			    <?php endif; ?>
 			</div>
 				<div class="cell small-4 cta-button">
+				<?php 
+				$link_purple_banner = get_field('cta_banner_button_link');
+				
+					$link_purple_banner_url = $link_purple_banner['url'];
+					$link_purple_banner_target = $link_purple_banner['target'] ? $link_purple_banner['target'] : '_self';
+				?>
 			    <?php if( get_field('cta_banner_button_link') ): ?>
-			    <a href="<?php the_field('cta_banner_button_link'); ?>" class="button"><?php the_field('cta_banner_button_text'); ?></a>
+			    <a href="<?php echo esc_url($link_purple_banner_url); ?>" class="button" target="<?php echo esc_attr($link_purple_banner_target); ?>"><?php the_field('cta_banner_button_text'); ?></a>
 			    <?php endif; ?>
 			</div>
 		</div>
