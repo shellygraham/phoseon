@@ -141,12 +141,62 @@ header {
 				background-color: #dededd;
 				padding: 0 0 0 14px;
 				position: relative;
+				li {
+					padding: 4px 4px 4px 10px;
+					background-color: #f1f1f1;
+				}
 				a {
 					background-image: url('../images/flags/USA.png');
 					background-size: 36px 28px;
 					width: 36px;
 					height: 28px;
-					text-indent: -999em;	
+					text-indent: -999em;
+					z-index: 40000;
+				}
+				.brazil {
+					a {
+						background-image: url('../images/flags/BR.png');
+					}
+				}
+				.china {
+					a {
+						background-image: url('../images/flags/CN.png');
+					}
+				}
+				.france {
+					a {
+						background-image: url('../images/flags/FR.png');
+					}
+				}
+				.germany {
+					a {
+						background-image: url('../images/flags/DE.png');
+					}
+				}
+				.italy {
+					a {
+						background-image: url('../images/flags/IT.png');
+					}
+				}
+				.japan {
+					a {
+						background-image: url('../images/flags/JP.png');
+					}
+				}
+				.south-korea {
+					a {
+						background-image: url('../images/flags/KR.png');
+					}
+				}
+				.spain {
+					a {
+						background-image: url('../images/flags/ES.png');
+					}
+				}
+				.taiwan {
+					a {
+						background-image: url('../images/flags/TW.png');
+					}
 				}
 				.submenu-toggle {
 					left: 0;
@@ -161,7 +211,8 @@ header {
 			.submenu {
 				position: absolute;
 				background: #fff;
-				z-index: 100;
+				z-index: 1000;
+				right: 0;
 			}
 		}
 		#utility-blog {
