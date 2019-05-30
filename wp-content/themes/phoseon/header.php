@@ -42,7 +42,7 @@
 							<ul id="utility-blog" class="vertical menu accordion-menu" data-accordion-menu>
 								<li><a href="#">Phoseon Blog</a>
 								<ul class="menu vertical nested">
-									<li><a href="https://blog.phoseon.com/blog" target="_blank">Industrial Curing</a></li>
+<!-- 									<li><a href="https://blog.phoseon.com/blog" target="_blank">Industrial Curing</a></li> -->
 									<li><a href="https://blog.phoseon.com/life-sciences" target="_blank">Life Sciences</a></li>
 								</ul>
 								</li>

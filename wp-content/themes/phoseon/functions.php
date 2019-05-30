@@ -60,5 +60,11 @@ require_once( 'library/gutenberg.php' );
 /** CPTs */
 require_once( 'library/custom-post-types.php' );
 
+// Fix for Guteberg ACF blocks extra p tags
+/**
+* Remove the wpautop filter from the_content
+*/
+
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
