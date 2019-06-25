@@ -16,7 +16,7 @@
 		}
 		?>
 		<div class="grid-x grid-margin-x banner-hero-container">
-			<div class="cell small-8">
+			<div class="cell medium-8">
 			    <h1><?php the_field('banner_hero_title'); ?></h1>
 			    <h2><?php the_field('banner_hero_subtitle'); ?></h2>
 			    

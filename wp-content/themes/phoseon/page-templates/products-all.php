@@ -13,6 +13,7 @@ get_header(); ?>
 				<?php the_content(); ?>
 			<?php endwhile; ?>
 			<h2 style="float: left;">Select your product requirements below:</h2><button id="clear-filters" class="button" style="float: right;">Clear Filters</button>
+			<hr />
 			</div>
 		</div>
 	</div>
@@ -27,4 +28,11 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
-<?php get_footer();
+<?php get_footer(); ?>
+<script type="text/javascript">
+	// Filtering Clear/reset button
+	var clearBtn = document.getElementById('clear-filters');
+	clearBtn.addEventListener('click', function(e){
+	   window.almFiltersClear();
+	});
+</script>

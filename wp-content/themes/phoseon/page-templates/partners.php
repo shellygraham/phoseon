@@ -24,7 +24,7 @@ get_header(); ?>
 						$the_query = new WP_Query( $args );
 						while ( $the_query->have_posts() ) :
 						    $the_query->the_post(); ?>
-						    <div class="variation cell small-3 bucket" style="padding-top: 20px;">
+						    <div class="variation cell small-6 medium-3 bucket" style="padding-top: 20px;">
 							    <a href="<?php the_field('partner_link'); ?>" target="_blank">
 								    <?php the_post_thumbnail(); ?>
 								</a>

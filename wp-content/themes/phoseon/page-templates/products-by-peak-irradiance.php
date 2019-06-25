@@ -34,7 +34,7 @@ get_header(); ?>
 									if( $posts ): ?>
 										<?php foreach( $posts as $post ): ?>
 										<?php setup_postdata($post); ?>
-								    	<div class="variation cell small-3 bucket">
+								    	<div class="variation cell small-6 medium-3 bucket">
 										<?php
 											$terms = get_the_terms( $post->ID , 'family_tax' );
 											 if ( $terms != null ){

@@ -17,10 +17,10 @@
 				<div></div>
 			</div>
 -->
-			<div class="cell small-3 small-offset-1">
+			<div class="cell medium-3 medium-offset-1">
 				<?php get_template_part( 'template-parts/social-nav' ); ?>
 			</div>
-			<div class="cell small-8">
+			<div class="cell medium-8">
 				<?php get_template_part( 'template-parts/footer-nav' ); ?>
 				<p class="copy"><?php the_field('footer_subtext','options'); ?></p>
 			</div>

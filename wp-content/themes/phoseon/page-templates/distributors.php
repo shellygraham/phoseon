@@ -5,7 +5,7 @@ Template Name: Distributors
 
 get_header(); ?>
 
-<div class="product-wrapper">
+<div class="product-wrapper distributors">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
 			<div class="cell small-12">
@@ -28,7 +28,7 @@ get_header(); ?>
 									$the_query = new WP_Query( $args );
 									while ( $the_query->have_posts() ) :
 									    $the_query->the_post(); ?>
-									    <div class="variation cell small-3 bucket" style="padding-top: 20px;">
+									    <div class="variation cell medium-3 bucket" style="padding-top: 20px;">
 										    <a href="<?php the_field('distributor_link'); ?>"><?php the_post_thumbnail(); ?></a>
 										    <div style="text-align: left; margin-top: 15px;">
 											    <h4 style="margin-bottom: 0; font-size: 16px;"><?php the_title(); ?></h4>
@@ -49,7 +49,7 @@ get_header(); ?>
 									$the_query = new WP_Query( $args );
 									while ( $the_query->have_posts() ) :
 									    $the_query->the_post(); ?>
-									    <div class="variation cell small-3 bucket" style="padding-top: 20px;">
+									    <div class="variation cell medium-3 bucket" style="padding-top: 20px;">
 										    <a href="<?php the_field('distributor_link'); ?>"><?php the_post_thumbnail(); ?></a>
 										    <div style="text-align: left; margin-top: 15px;">
 											    <h4 style="margin-bottom: 0; font-size: 16px;"><?php the_title(); ?></h4>
@@ -70,7 +70,7 @@ get_header(); ?>
 									$the_query = new WP_Query( $args );
 									while ( $the_query->have_posts() ) :
 									    $the_query->the_post(); ?>
-									    <div class="variation cell small-3 bucket" style="padding-top: 20px;">
+									    <div class="variation cell medium-3 bucket" style="padding-top: 20px;">
 										    <a href="<?php the_field('distributor_link'); ?>"><?php the_post_thumbnail(); ?></a>
 										    <div style="text-align: left; margin-top: 15px;">
 											    <h4 style="margin-bottom: 0; font-size: 16px;"><?php the_title(); ?></h4>

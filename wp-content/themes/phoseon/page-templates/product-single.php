@@ -36,7 +36,7 @@ get_header(); ?>
 				<div class="grid-x grid-margin-x">
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				
-				<div class="variation cell small-4 bucket">
+				<div class="variation cell small-12 medium-4 bucket">
 					<h3><?php the_title() ;?></h3>
 					<?php the_post_thumbnail(); ?>
 	

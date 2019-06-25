@@ -20,7 +20,7 @@ get_header(); ?>
 	</div>
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-8">
+			<div class="cell medium-8">
 				<?php if( have_rows('product_variations') ): ?>
 				<div class="grid-x grid-margin-x">
 				    <?php while ( have_rows('product_variations') ) : the_row(); ?>
@@ -60,14 +60,14 @@ get_header(); ?>
 				</div>				
 				<?php endif; ?>
 			</div>
-			<div class="cell small-4 products-sidebar">
+			<div class="cell medium-4 products-sidebar">
 				<?php the_field('right_sidebar_open_content'); ?>
 			</div>
 		</div>
 	</div>
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-8">
+			<div class="cell medium-8">
 				<?php the_field('bottom_content_open_content'); ?>
 			</div>
 		</div>

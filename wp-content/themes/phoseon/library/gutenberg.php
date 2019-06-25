@@ -1,5 +1,14 @@
 <?php
 
+remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', function ($content) {
+    if (has_blocks()) {
+        return $content;
+    }
+
+    return wpautop($content);
+});
+
 if ( ! function_exists( 'foundationpress_gutenberg_support' ) ) :
 	function foundationpress_gutenberg_support() {
 

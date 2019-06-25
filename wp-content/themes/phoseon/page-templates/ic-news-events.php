@@ -15,7 +15,7 @@ get_header(); ?>
 		</div>
 	</div>
 	<div class="grid-x grid-margin-x">
-		<div class="cell small-4">
+		<div class="cell medium-4">
 			<h2>Press Releases</h2>
 
 			<!-- Featured post -->
@@ -65,9 +65,9 @@ get_header(); ?>
 			    	get_template_part( 'template-parts/content-news', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-			<a href="/life-sciences/resources/ic-news-events/industrial-curing-press-releases/" class="button">See more Phoseon press releases »</a>
+			<a href="http://wordpress.phoseon.com/industrial-curing/resources/ic-news-events/industrial-curing-press-releases/" class="button">See more Phoseon press releases »</a>
 		</div>
-		<div class="cell small-4">
+		<div class="cell medium-4">
 			<h2>In the News</h2>
 
 			<!-- Featured post -->
@@ -117,9 +117,9 @@ get_header(); ?>
 			    	get_template_part( 'template-parts/content-news', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-			<a href="/life-sciences/resources/ic-news-events/industrial-curing-in-the-news/" class="button"><?php the_field('phoseon_news_button','options'); ?></a>
+			<a href="http://wordpress.phoseon.com/industrial-curing/resources/ic-news-events/industrial-curing-in-the-news/" class="button"><?php the_field('phoseon_news_button','options'); ?></a>
 		</div>
-		<div class="cell small-4">
+		<div class="cell medium-4">
 			<h2>Events</h2>
 
 			<!-- Featured post -->
@@ -169,7 +169,7 @@ get_header(); ?>
 			    	get_template_part( 'template-parts/content-events', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-			<a href="/life-sciences/resources/industrial-curing-events/" class="button">See more Phoseon events »</a>
+			<a href="http://wordpress.phoseon.com/industrial-curing/resources/industrial-curing-events/" class="button">See more Phoseon events »</a>
 		</div>
 	</div>
 </div>

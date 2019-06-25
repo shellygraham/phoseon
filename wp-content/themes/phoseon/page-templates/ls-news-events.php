@@ -19,7 +19,7 @@ get_header(); ?>
 		</div>
 	</div>
 	<div class="grid-x grid-margin-x">
-		<div class="cell small-4">
+		<div class="cell medium-4">
 			<h2>Press Releases</h2>
 
 			<!-- Featured post -->
@@ -69,9 +69,9 @@ get_header(); ?>
 			    	get_template_part( 'template-parts/content-news', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-			<a href="/life-sciences/resources/ls-news-events/life-sciences-press-releases/" class="button">See more Phoseon press releases »</a>
+			<a href="http://wordpress.phoseon.com/life-sciences/resources/ls-news-events/life-sciences-press-releases/" class="button">See more Phoseon press releases »</a>
 		</div>
-		<div class="cell small-4">
+		<div class="cell medium-4">
 			<h2>In the News</h2>
 
 			<!-- Featured post -->
@@ -121,9 +121,9 @@ get_header(); ?>
 			    	get_template_part( 'template-parts/content-news', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-			<a href="/life-sciences/resources/ls-news-events/life-sciences-in-the-news/" class="button">See more Phoseon news »</a>
+			<a href="http://wordpress.phoseon.com/life-sciences/resources/ls-news-events/life-sciences-in-the-news/" class="button">See more Phoseon news »</a>
 		</div>
-		<div class="cell small-4">
+		<div class="cell medium-4">
 			<h2>Events</h2>
 
 			<!-- Featured post -->
@@ -173,7 +173,7 @@ get_header(); ?>
 			    	get_template_part( 'template-parts/content-events', get_post_format() );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-			<a href="/life-sciences/resources/life-sciences-events/" class="button">See more Phoseon events »</a>
+			<a href="http://wordpress.phoseon.com/life-sciences/resources/life-sciences-events/" class="button">See more Phoseon events »</a>
 		</div>
 	</div>
 </div>

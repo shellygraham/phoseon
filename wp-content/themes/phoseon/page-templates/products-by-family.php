@@ -21,7 +21,7 @@ get_header(); ?>
 				<div class="grid-x grid-margin-x">
 				<?php if( have_rows('product_family_selector') ):
 			    	while ( have_rows('product_family_selector') ) : the_row(); ?>	
-			    	<div class="variation cell small-3 bucket">
+			    	<div class="variation cell small-6 medium-3 bucket">
 						<a href="<?php the_sub_field('product_family_link'); ?>">
 							<?php 
 								

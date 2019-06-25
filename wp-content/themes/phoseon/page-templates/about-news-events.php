@@ -6,7 +6,7 @@ get_header(); ?>
 
 <div class="grid-container news-main">
 	<div class="grid-x grid-margin-x">
-		<div class="cell small-6">
+		<div class="cell medium-6">
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<h1><?php the_title(); ?></h1>
@@ -14,12 +14,12 @@ get_header(); ?>
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</div>
-		<div class="cell small-6">
+		<div class="cell medium-6">
 			<?php the_post_thumbnail('fp-small'); ?>
 		</div>
 	</div>
 	<div class="grid-x grid-margin-x">
-		<div class="cell small-4">
+		<div class="cell medium-4 feed-column">
 			<h2>Press Releases</h2>
 
 			<!-- Featured post -->
@@ -65,7 +65,7 @@ get_header(); ?>
 			<?php wp_reset_postdata(); ?>
 			<a href="/press-releases" class="button"><?php the_field('phoseon_pr_button','option'); ?></a>
 		</div>
-		<div class="cell small-4">
+		<div class="cell medium-4 feed-column">
 			<h2>In the News</h2>
 			<!-- Featured post -->
 			<?php $the_query = new WP_Query( array(
@@ -110,7 +110,7 @@ get_header(); ?>
 			<?php wp_reset_postdata(); ?>
 			<a href="/in-the-news" class="button"><?php the_field('phoseon_news_button','options'); ?></a>
 		</div>
-		<div class="cell small-4">
+		<div class="cell medium-4 feed-column">
 			<h2>Events</h2>
 			<!-- Featured post -->
 			<?php $the_query = new WP_Query( array(

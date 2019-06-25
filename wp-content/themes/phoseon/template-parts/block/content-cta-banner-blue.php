@@ -9,12 +9,12 @@
 <section class="cta-banner blue">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="cell small-6 small-offset-2">			    
+			<div class="cell small-12 medium-6 medium-offset-2">			    
 			    <?php if( get_field('cta_paragraph') ): ?>
 			    <h4><?php the_field('cta_paragraph'); ?></h4>
 			    <?php endif; ?>
 			</div>
-				<div class="cell small-4 cta-button">
+				<div class="cell small-12 medium-4 cta-button">
 				<?php 
 				$link_blue_banner = get_field('cta_banner_button_link');
 				
