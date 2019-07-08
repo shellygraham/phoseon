@@ -30,7 +30,7 @@ h1 {
 	font-size: 48px;
 	line-height: 57px;
 	margin-bottom: 20px;
-	@media screen and (max-width: 480px) {
+	@media screen and (max-width: 1025px) {
 		font-size: 32px;
 		line-height: normal;
 	}
@@ -39,7 +39,7 @@ h1 {
 	h1 {
 		line-height: 69px;
 		font-size: 58px;
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 1025px) {
 			font-size: 32px;
 			line-height: normal;
 		}
@@ -140,6 +140,9 @@ header {
 		#country-menu {
 			float: left;
 			margin-right: 10px;
+			@media screen and (max-width: 480px) {
+				width: auto;
+			}
 			.country-picker {
 				width: 54px;
 				height: 100%;
@@ -158,6 +161,9 @@ header {
 					height: 28px;
 					text-indent: -999em;
 					z-index: 40000;
+					@media screen and (max-width: 480px) {
+						background-size: cover;
+					}
 				}
 				.brazil {
 					a {
@@ -212,6 +218,9 @@ header {
 					&:after {
 						margin-left: 0;
 					}
+					@media screen and (max-width: 480px) {
+						background: none;
+					}
 				}
 			}
 			.submenu {
@@ -233,11 +242,21 @@ header {
 				width: 118px;
 				font-size: 14px;
 				font-family: $font-bold;
+				li {
+					background: #ddd;
+					a {
+						color: #006eb9;
+						border-bottom: 0;
+					}
+				}
 			}
 			.nested.is-accordion-submenu {
 				position: absolute;
 				background-color: rgba(0, 110, 185, 0.9);
 				border: 0;
+				@media screen and (max-width: 480px) {
+					z-index: 10;
+				}
 			}
 			.is-accordion-submenu-parent {
 				a {
@@ -248,8 +267,11 @@ header {
 					}
 				}
 				@media screen and (max-width: 480px) {
-					a {
-						padding-top: 0;
+					.nested {
+						a {
+							padding-top: 0;
+							background: $blue;
+						}						
 					}
 				}
 			}
@@ -292,7 +314,7 @@ header {
 			float: left;
 			.input-group-field {
 				width: 198px;
-				background-color: #dededd;
+				background-color: #ececec;
 				border: 0;
 				height: 28px;
 				font-size: 14px;
@@ -408,8 +430,38 @@ header {
 		}
 		.mobile-menu {
 			.menu {
-				a {
-					font-family: $font-bold;
+				margin-left: 0;
+				width: 100%;
+				li {
+					background-color: #006eb9;
+					a {
+						font-family: $font-bold;
+					    padding: 16px 16px;
+					    width: 100%;
+					    border-bottom: 1px solid #fff;
+					    color: #fff;
+					}
+				    .submenu-toggle {
+						width: 48px;
+						height: 48px;
+						z-index: 10;
+					    background: #2C3840;
+				    }
+				}
+				&.nested {
+					a {
+						padding-left: 32px;						
+					}
+					.nested {
+						a {
+							padding-left: 48px;
+						}
+						.nested {
+							a {
+								padding-left: 66px;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -990,6 +1042,17 @@ footer {
     right: 0;
     border-color: #006eb9 transparent transparent;
 }
+.site-navigation {
+	.is-submenu-item.is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+		right: 6px;
+		border-color: #fff transparent transparent;
+	}
+	.is-submenu-item.is-accordion-submenu-parent[aria-expanded='true'] > a::after {
+		right: 6px;
+		border-color: #fff transparent transparent;
+	}
+}
+
 .accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
     transform-origin: 50% 50%;
     right: 0;
@@ -1259,6 +1322,8 @@ footer {
 	}
 }
 
+/*
 #wpadminbar {
 	display: none !important;
 }
+*/
